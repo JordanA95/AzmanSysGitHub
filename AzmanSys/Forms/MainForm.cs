@@ -19,7 +19,7 @@ namespace AzmanSys
 
         private void btnManageCustomers_Click(object sender, EventArgs e)
         {
-            Close(); // closes the current "MainForm" form
+            Close(); // closes the current "MainForm" for
             CustomersForm custForm = new CustomersForm();
             custForm.Show();
         }
