@@ -34,13 +34,14 @@ namespace AzmanSys
         }
         public bool connOpen()
         {
-            try { conn.Open(); return true; }
+            try { conn.Open(); return true; } //If the connection is open, return true
             catch (MySqlException err)
             {//Connection error handling control statement
                 switch (err.Number)
                 {
                     case 0:
                         MessageBox.Show("Server connection failure");
+                        //If the number is 0, the connetion has failed and connection failure message displays
                         break;
                     case 1045:
                         MessageBox.Show("User/Password Error");

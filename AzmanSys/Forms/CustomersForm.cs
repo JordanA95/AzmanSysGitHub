@@ -48,7 +48,12 @@ namespace AzmanSys
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-           
+            if (mysqlConn.connOpen() == true)
+            {
+                mysqlConn.updateCustomer(tbCustID.Text, tbFName.Text, tbLName.Text, tbTel.Text);
+                dataGridView1.DataSource = mysqlConn.qry("SELECT * FROM `tblCustomer`").Tables[0];
+            }
+            mysqlConn.connClose();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -74,5 +79,6 @@ namespace AzmanSys
         {
             Application.Exit();
         }
+
     }
 }
