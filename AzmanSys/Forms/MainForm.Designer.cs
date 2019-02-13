@@ -32,12 +32,13 @@
             this.btnManageFlights = new System.Windows.Forms.Button();
             this.btnManageBookings = new System.Windows.Forms.Button();
             this.AzmanSys_title = new System.Windows.Forms.Label();
+            this.ExitAzmanSys = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnManageCustomers
             // 
             this.btnManageCustomers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnManageCustomers.Location = new System.Drawing.Point(46, 56);
+            this.btnManageCustomers.Location = new System.Drawing.Point(37, 67);
             this.btnManageCustomers.Name = "btnManageCustomers";
             this.btnManageCustomers.Size = new System.Drawing.Size(103, 52);
             this.btnManageCustomers.TabIndex = 0;
@@ -48,7 +49,7 @@
             // btnManageFlights
             // 
             this.btnManageFlights.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnManageFlights.Location = new System.Drawing.Point(180, 56);
+            this.btnManageFlights.Location = new System.Drawing.Point(188, 67);
             this.btnManageFlights.Name = "btnManageFlights";
             this.btnManageFlights.Size = new System.Drawing.Size(94, 52);
             this.btnManageFlights.TabIndex = 1;
@@ -59,7 +60,7 @@
             // btnManageBookings
             // 
             this.btnManageBookings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnManageBookings.Location = new System.Drawing.Point(307, 56);
+            this.btnManageBookings.Location = new System.Drawing.Point(328, 67);
             this.btnManageBookings.Name = "btnManageBookings";
             this.btnManageBookings.Size = new System.Drawing.Size(102, 52);
             this.btnManageBookings.TabIndex = 2;
@@ -78,19 +79,30 @@
             this.AzmanSys_title.TabIndex = 3;
             this.AzmanSys_title.Text = "AzmanSys";
             // 
+            // ExitAzmanSys
+            // 
+            this.ExitAzmanSys.BackColor = System.Drawing.Color.Red;
+            this.ExitAzmanSys.Location = new System.Drawing.Point(140, 134);
+            this.ExitAzmanSys.Name = "ExitAzmanSys";
+            this.ExitAzmanSys.Size = new System.Drawing.Size(191, 52);
+            this.ExitAzmanSys.TabIndex = 4;
+            this.ExitAzmanSys.Text = "Exit Azman Sys";
+            this.ExitAzmanSys.UseVisualStyleBackColor = false;
+            this.ExitAzmanSys.Click += new System.EventHandler(this.ExitAzmanSys_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(475, 160);
+            this.ClientSize = new System.Drawing.Size(469, 207);
+            this.Controls.Add(this.ExitAzmanSys);
             this.Controls.Add(this.AzmanSys_title);
             this.Controls.Add(this.btnManageBookings);
             this.Controls.Add(this.btnManageFlights);
             this.Controls.Add(this.btnManageCustomers);
             this.Name = "MainForm";
             this.Text = "MainForm";
-           // this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -102,6 +114,7 @@
         private System.Windows.Forms.Button btnManageFlights;
         private System.Windows.Forms.Button btnManageBookings;
         private System.Windows.Forms.Label AzmanSys_title;
+        private System.Windows.Forms.Button ExitAzmanSys;
     }
 }
 

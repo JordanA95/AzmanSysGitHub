@@ -192,8 +192,8 @@
             // 
             // btnMainMenu
             // 
-            this.btnMainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnMainMenu.Location = new System.Drawing.Point(469, 180);
+            this.btnMainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnMainMenu.Location = new System.Drawing.Point(665, 12);
             this.btnMainMenu.Name = "btnMainMenu";
             this.btnMainMenu.Size = new System.Drawing.Size(123, 23);
             this.btnMainMenu.TabIndex = 35;

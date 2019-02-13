@@ -92,5 +92,10 @@ namespace AzmanSys
             mysqlConn.connClose();
         }
 
+        private void btnMainMenu_Click_1(object sender, EventArgs e)
+        {
+            Close();
+            (new MainForm()).Show();
+        }
     }
 }

@@ -45,6 +45,7 @@
             this.tbArrivalCity = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.Flights_title = new System.Windows.Forms.Label();
+            this.btnMainMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -208,12 +209,24 @@
             this.Flights_title.TabIndex = 33;
             this.Flights_title.Text = "Flights";
             // 
+            // btnMainMenu
+            // 
+            this.btnMainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnMainMenu.Location = new System.Drawing.Point(628, 12);
+            this.btnMainMenu.Name = "btnMainMenu";
+            this.btnMainMenu.Size = new System.Drawing.Size(136, 23);
+            this.btnMainMenu.TabIndex = 34;
+            this.btnMainMenu.Text = "Back to Main Menu";
+            this.btnMainMenu.UseVisualStyleBackColor = false;
+            this.btnMainMenu.Click += new System.EventHandler(this.btnMainMenu_Click_1);
+            // 
             // FlightsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(776, 450);
+            this.Controls.Add(this.btnMainMenu);
             this.Controls.Add(this.Flights_title);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tbArrivalCity);
@@ -233,7 +246,6 @@
             this.Controls.Add(this.btnAdd);
             this.Name = "FlightsForm";
             this.Text = "Flights";
-            //this.Load += new System.EventHandler(this.FlightsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -259,5 +271,6 @@
         private System.Windows.Forms.TextBox tbArrivalCity;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label Flights_title;
+        private System.Windows.Forms.Button btnMainMenu;
     }
 }

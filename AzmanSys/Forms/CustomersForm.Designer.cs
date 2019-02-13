@@ -41,6 +41,7 @@
             this.tbLName = new System.Windows.Forms.TextBox();
             this.tbTel = new System.Windows.Forms.TextBox();
             this.Customers_title = new System.Windows.Forms.Label();
+            this.btnMainMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -168,12 +169,24 @@
             this.Customers_title.TabIndex = 34;
             this.Customers_title.Text = "Customers";
             // 
+            // btnMainMenu
+            // 
+            this.btnMainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnMainMenu.Location = new System.Drawing.Point(659, 12);
+            this.btnMainMenu.Name = "btnMainMenu";
+            this.btnMainMenu.Size = new System.Drawing.Size(129, 23);
+            this.btnMainMenu.TabIndex = 35;
+            this.btnMainMenu.Text = "Back to Main Menu";
+            this.btnMainMenu.UseVisualStyleBackColor = false;
+            this.btnMainMenu.Click += new System.EventHandler(this.btnMainMenu_Click_1);
+            // 
             // CustomersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnMainMenu);
             this.Controls.Add(this.Customers_title);
             this.Controls.Add(this.tbTel);
             this.Controls.Add(this.tbLName);
@@ -189,7 +202,6 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "CustomersForm";
             this.Text = "Customers";
-            //this.Load += new System.EventHandler(this.CustomersForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -211,5 +223,6 @@
         private System.Windows.Forms.TextBox tbLName;
         private System.Windows.Forms.TextBox tbTel;
         private System.Windows.Forms.Label Customers_title;
+        private System.Windows.Forms.Button btnMainMenu;
     }
 }

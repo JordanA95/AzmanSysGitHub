@@ -38,5 +38,10 @@ namespace AzmanSys
             bookingsForm.Show();
           
         }
+
+        private void ExitAzmanSys_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
