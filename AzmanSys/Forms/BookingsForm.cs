@@ -29,7 +29,7 @@ namespace AzmanSys
         {
             if (mysqlConn.connOpen() == true)
             {
-                mysqlConn.updateBooking(tbBookingID.Text, tbCustomerID.Text, tbFlightID.Text, dtBookingDateTime.Text, tbBookingTotalCost.Text);
+                mysqlConn.addBooking(tbBookingID.Text, tbCustomerID.Text, tbFlightID.Text, dtBookingDateTime.Text, tbBookingTotalCost.Text);
                 dataGridView1.DataSource = mysqlConn.qry("SELECT * FROM `tblBooking`").Tables[0];
             }
             mysqlConn.connClose();
@@ -47,12 +47,15 @@ namespace AzmanSys
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            if (DialogResult.Yes == MessageBox.Show("Are you sure you want to delete this record ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+            {
                 if (mysqlConn.connOpen() == true)
                 {
                     mysqlConn.deleteBooking(tbBookingID.Text);
                     dataGridView1.DataSource = mysqlConn.qry("SELECT * FROM `tblBooking`").Tables[0];
                 }
-            mysqlConn.connClose();
+                mysqlConn.connClose();
+            }
         }
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)

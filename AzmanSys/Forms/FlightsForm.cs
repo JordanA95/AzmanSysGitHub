@@ -48,7 +48,15 @@ namespace AzmanSys
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-
+            if (DialogResult.Yes == MessageBox.Show("Are you sure you want to delete this record ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+            {
+                if (mysqlConn.connOpen() == true)
+                {
+                    mysqlConn.deleteFlight(tbFlightID.Text);
+                    dataGridView1.DataSource = mysqlConn.qry("SELECT * FROM `tblFlight`").Tables[0];
+                }
+                mysqlConn.connClose();
+            }
         }
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
