@@ -46,6 +46,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.Flights_title = new System.Windows.Forms.Label();
             this.btnMainMenu = new System.Windows.Forms.Button();
+            this.Searchflightbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -139,7 +140,7 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(65, 232);
+            this.dataGridView1.Location = new System.Drawing.Point(65, 251);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -220,12 +221,23 @@
             this.btnMainMenu.UseVisualStyleBackColor = false;
             this.btnMainMenu.Click += new System.EventHandler(this.btnMainMenu_Click_1);
             // 
+            // Searchflightbtn
+            // 
+            this.Searchflightbtn.Location = new System.Drawing.Point(425, 198);
+            this.Searchflightbtn.Name = "Searchflightbtn";
+            this.Searchflightbtn.Size = new System.Drawing.Size(108, 23);
+            this.Searchflightbtn.TabIndex = 36;
+            this.Searchflightbtn.Text = "Search for Flight";
+            this.Searchflightbtn.UseVisualStyleBackColor = true;
+            this.Searchflightbtn.Click += new System.EventHandler(this.Searchflightbtn_Click);
+            // 
             // FlightsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(776, 450);
+            this.ClientSize = new System.Drawing.Size(776, 469);
+            this.Controls.Add(this.Searchflightbtn);
             this.Controls.Add(this.btnMainMenu);
             this.Controls.Add(this.Flights_title);
             this.Controls.Add(this.label5);
@@ -272,5 +284,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label Flights_title;
         private System.Windows.Forms.Button btnMainMenu;
+        private System.Windows.Forms.Button Searchflightbtn;
     }
 }

@@ -34,6 +34,7 @@ namespace AzmanSys
             }
             mysqlConn.connClose();
         }
+        //This is the code for adding a new customer to the tblCustomer table.
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
@@ -55,6 +56,7 @@ namespace AzmanSys
             }
             mysqlConn.connClose();
         }
+        //This is the code for updating the customer details an inserting the details into the tbl Customer table.
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
@@ -68,17 +70,20 @@ namespace AzmanSys
                 mysqlConn.connClose();
             }
         }
+        //This is the code for deleting the cutomer details from the table with an alert message confirming that the user wants to delete the data.
 
         private void btnMainMenu_Click(object sender, EventArgs e)
         {
             Close();
             (new MainForm()).Show();
         }
+        //This is the code for returning to the main menu by closing the CustomersForm and opening the MainForm.
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+        //This is the code for closing the whole application.
 
         private void btnMainMenu_Click_1(object sender, EventArgs e)
         {

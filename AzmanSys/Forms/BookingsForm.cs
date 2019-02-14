@@ -24,6 +24,7 @@ namespace AzmanSys
             }
             mysqlConn.connClose();
         }
+        //Connects to the MySQL Database tblBooking.
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -34,6 +35,7 @@ namespace AzmanSys
             }
             mysqlConn.connClose();
         }
+        //Adds a booking to the database using the values entrered into the form and sends those details to the MySQL tblBooking database.
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
@@ -44,6 +46,7 @@ namespace AzmanSys
             }
             mysqlConn.connClose();
         }
+        //Updates the booking details by using the values entrered into the form and sends those to the MySQL tblBooking database to update it.
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
@@ -57,6 +60,7 @@ namespace AzmanSys
                 mysqlConn.connClose();
             }
         }
+        //Deletes a booking by removing it from the MySQL tblBooking database.
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
@@ -74,11 +78,13 @@ namespace AzmanSys
         {
             Application.Exit();
         }
+        //Closes the entire application.
 
         private void btnMainMenu_Click(object sender, EventArgs e)
         {
             Close();
             (new MainForm()).Show();
         }
+        //Closes the BookingsForm and opens the MainForm.
     }
 }

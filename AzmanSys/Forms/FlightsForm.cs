@@ -24,6 +24,7 @@ namespace AzmanSys
             }
             mysqlConn.connClose();
         }
+        //Connects to the MySQL database tblflight.
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -34,6 +35,7 @@ namespace AzmanSys
             }
             mysqlConn.connClose();
         }
+        //Adds a flight to the database using the values entrered into the form and sends those details to the MySQL tblFlight database.
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
@@ -45,6 +47,7 @@ namespace AzmanSys
             }
             mysqlConn.connClose();
         }
+        //Updates the flight details by using the values entrered into the form and sends those to the MySQL tblFlight database to update it.
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
@@ -58,6 +61,7 @@ namespace AzmanSys
                 mysqlConn.connClose();
             }
         }
+        //Deletes a flight by removing it from the MySQL tblFlight database.
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
@@ -77,25 +81,28 @@ namespace AzmanSys
             Close();
             (new MainForm()).Show();
         }
+        //Closes the FlightsForm and opens the MainForm.
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            if (mysqlConn.connOpen() == true)
-            {
-                dataGridView1.DataSource = mysqlConn.qry("SELECT * FROM `tblFlight` where F_Departure_City='"+tbDepartureCity.Text+"' Or F_Arrival_City='"+tbArrivalCity.Text+"'").Tables[0];
-            }
-            mysqlConn.connClose();
-        }
+        //Closes the entire application.
 
         private void btnMainMenu_Click_1(object sender, EventArgs e)
         {
             Close();
             (new MainForm()).Show();
         }
+
+        private void Searchflightbtn_Click(object sender, EventArgs e)
+        {
+            if (mysqlConn.connOpen() == true)
+            {
+                dataGridView1.DataSource = mysqlConn.qry("SELECT * FROM `tblFlight` where F_Departure_City='" + tbDepartureCity.Text + "' Or F_Arrival_City='" + tbArrivalCity.Text + "'").Tables[0];
+            }
+            mysqlConn.connClose();
+        }
+        //Searches the MySQL tblFlight database for flights matching the departure city and arrival city entered.
     }
 }

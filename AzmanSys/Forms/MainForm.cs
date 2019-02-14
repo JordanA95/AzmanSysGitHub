@@ -21,27 +21,27 @@ namespace AzmanSys
         {
             Close(); // closes the current "MainForm" form
             CustomersForm custForm = new CustomersForm();
-            custForm.Show();
+            custForm.Show(); //Opens the customer form
         }
 
         private void btnManageFlights_Click(object sender, EventArgs e)
         {
             Close(); // closes the current "MainForm" form
             FlightsForm flightsForm = new FlightsForm();
-            flightsForm.Show();
+            flightsForm.Show(); //Opens the flights form
         }
 
         private void btnManageBookings_Click(object sender, EventArgs e)
         {
             Close(); // closes the current "MainForm" form
             BookingsForm bookingsForm = new BookingsForm();
-            bookingsForm.Show();
+            bookingsForm.Show(); //Opens the bookings form
           
         }
 
         private void ExitAzmanSys_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Application.Exit(); //closes the whole application
         }
     }
 }

@@ -20,7 +20,7 @@ namespace AzmanSys
             comm.ExecuteNonQuery();
             connClose();
         }
-
+        //Inserts the details of a new customer into the SQL Database "tblCustomer" by adding customer details into the table.
 
         public void updateCustomer(string CusID, string FName, string LName, string TelNum)
         {
@@ -33,6 +33,7 @@ namespace AzmanSys
             comm.ExecuteNonQuery();
             connClose();
         }
+        //Updates customer details in the SQL Database by replacing the existing customer details with the new customer details.
 
         public void deleteCustomer(string CusID)
         {
@@ -42,5 +43,6 @@ namespace AzmanSys
             comm.ExecuteNonQuery();
             connClose();
         }
+        //Deletes a customer by removing customer details from the database.
     }
 }
