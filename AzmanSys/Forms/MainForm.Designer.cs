@@ -33,12 +33,14 @@
             this.btnManageBookings = new System.Windows.Forms.Button();
             this.AzmanSys_title = new System.Windows.Forms.Label();
             this.ExitAzmanSys = new System.Windows.Forms.Button();
+            this.logoutbtn = new System.Windows.Forms.Button();
+            this.loginbtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnManageCustomers
             // 
             this.btnManageCustomers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnManageCustomers.Location = new System.Drawing.Point(37, 67);
+            this.btnManageCustomers.Location = new System.Drawing.Point(37, 86);
             this.btnManageCustomers.Name = "btnManageCustomers";
             this.btnManageCustomers.Size = new System.Drawing.Size(103, 52);
             this.btnManageCustomers.TabIndex = 0;
@@ -49,7 +51,7 @@
             // btnManageFlights
             // 
             this.btnManageFlights.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnManageFlights.Location = new System.Drawing.Point(188, 67);
+            this.btnManageFlights.Location = new System.Drawing.Point(188, 86);
             this.btnManageFlights.Name = "btnManageFlights";
             this.btnManageFlights.Size = new System.Drawing.Size(94, 52);
             this.btnManageFlights.TabIndex = 1;
@@ -60,7 +62,7 @@
             // btnManageBookings
             // 
             this.btnManageBookings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnManageBookings.Location = new System.Drawing.Point(328, 67);
+            this.btnManageBookings.Location = new System.Drawing.Point(328, 86);
             this.btnManageBookings.Name = "btnManageBookings";
             this.btnManageBookings.Size = new System.Drawing.Size(102, 52);
             this.btnManageBookings.TabIndex = 2;
@@ -82,7 +84,7 @@
             // ExitAzmanSys
             // 
             this.ExitAzmanSys.BackColor = System.Drawing.Color.Red;
-            this.ExitAzmanSys.Location = new System.Drawing.Point(140, 134);
+            this.ExitAzmanSys.Location = new System.Drawing.Point(140, 153);
             this.ExitAzmanSys.Name = "ExitAzmanSys";
             this.ExitAzmanSys.Size = new System.Drawing.Size(191, 52);
             this.ExitAzmanSys.TabIndex = 4;
@@ -90,12 +92,34 @@
             this.ExitAzmanSys.UseVisualStyleBackColor = false;
             this.ExitAzmanSys.Click += new System.EventHandler(this.ExitAzmanSys_Click);
             // 
+            // logoutbtn
+            // 
+            this.logoutbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.logoutbtn.Location = new System.Drawing.Point(382, 41);
+            this.logoutbtn.Name = "logoutbtn";
+            this.logoutbtn.Size = new System.Drawing.Size(75, 23);
+            this.logoutbtn.TabIndex = 7;
+            this.logoutbtn.Text = "Log Out";
+            this.logoutbtn.UseVisualStyleBackColor = false;
+            // 
+            // loginbtn
+            // 
+            this.loginbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.loginbtn.Location = new System.Drawing.Point(382, 12);
+            this.loginbtn.Name = "loginbtn";
+            this.loginbtn.Size = new System.Drawing.Size(75, 23);
+            this.loginbtn.TabIndex = 8;
+            this.loginbtn.Text = "Login";
+            this.loginbtn.UseVisualStyleBackColor = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(469, 207);
+            this.ClientSize = new System.Drawing.Size(469, 225);
+            this.Controls.Add(this.loginbtn);
+            this.Controls.Add(this.logoutbtn);
             this.Controls.Add(this.ExitAzmanSys);
             this.Controls.Add(this.AzmanSys_title);
             this.Controls.Add(this.btnManageBookings);
@@ -115,6 +139,8 @@
         private System.Windows.Forms.Button btnManageBookings;
         private System.Windows.Forms.Label AzmanSys_title;
         private System.Windows.Forms.Button ExitAzmanSys;
+        private System.Windows.Forms.Button logoutbtn;
+        private System.Windows.Forms.Button loginbtn;
     }
 }
 

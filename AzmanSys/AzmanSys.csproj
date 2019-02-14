@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\AzmanSysLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AzmanSysLogin.Designer.cs">
+      <DependentUpon>AzmanSysLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\BookingsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\AzmanSysLogin.resx">
+      <DependentUpon>AzmanSysLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\BookingsForm.resx">
       <DependentUpon>BookingsForm.cs</DependentUpon>
     </EmbeddedResource>
