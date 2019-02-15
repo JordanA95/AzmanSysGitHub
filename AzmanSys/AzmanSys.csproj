@@ -79,12 +79,6 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\signin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\signin.Designer.cs">
-      <DependentUpon>signin.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\BookingsForm.resx">
