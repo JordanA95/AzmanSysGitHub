@@ -104,13 +104,13 @@
             // 
             // loginbtn
             // 
-            this.loginbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.loginbtn.Location = new System.Drawing.Point(382, 12);
             this.loginbtn.Name = "loginbtn";
             this.loginbtn.Size = new System.Drawing.Size(75, 23);
             this.loginbtn.TabIndex = 8;
-            this.loginbtn.Text = "Login";
-            this.loginbtn.UseVisualStyleBackColor = false;
+            this.loginbtn.Text = "Log In";
+            this.loginbtn.UseVisualStyleBackColor = true;
+            this.loginbtn.Click += new System.EventHandler(this.loginbtn_Click);
             // 
             // MainForm
             // 

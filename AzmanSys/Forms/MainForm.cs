@@ -43,5 +43,10 @@ namespace AzmanSys
         {
             Application.Exit(); //closes the whole application
         }
+
+        private void loginbtn_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

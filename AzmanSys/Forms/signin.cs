@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AzmanSys.Forms
 {
-    public partial class AzmanSysLogin : Form
+    public partial class signin : Form
     {
-        public AzmanSysLogin()
+        public signin()
         {
             InitializeComponent();
         }
