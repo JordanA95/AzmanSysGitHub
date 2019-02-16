@@ -12,10 +12,16 @@ namespace AzmanSys
 {
     public partial class MainForm : Form
     {
+        LoginDbConn mysqlConn;
         public MainForm()
         {
             InitializeComponent();
+            mysqlConn = new LoginDbConn();
+            mysqlConn.connect();
+            if (mysqlConn.connOpen() == true)
+            mysqlConn.connClose();
         }
+        //Connects to the MySQL database tblUserLogin.
 
         private void btnManageCustomers_Click(object sender, EventArgs e)
         {
@@ -42,6 +48,15 @@ namespace AzmanSys
         private void ExitAzmanSys_Click(object sender, EventArgs e)
         {
             Application.Exit(); //closes the whole application
+        }
+
+        private void signupbtn_Click(object sender, EventArgs e)
+        {
+            if (mysqlConn.connOpen() == true)
+            {
+                mysqlConn.insertNewUser(Passwordtxb.Text, Usernametxb.Text);
+            }
+            mysqlConn.connClose();
         }
     }
 }

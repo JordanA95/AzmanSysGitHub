@@ -34,7 +34,7 @@
             this.AzmanSys_title = new System.Windows.Forms.Label();
             this.ExitAzmanSys = new System.Windows.Forms.Button();
             this.Usernametxb = new System.Windows.Forms.TextBox();
-            this.Password = new System.Windows.Forms.TextBox();
+            this.Passwordtxb = new System.Windows.Forms.TextBox();
             this.signinbtn = new System.Windows.Forms.Button();
             this.signoutbtn = new System.Windows.Forms.Button();
             this.signupbtn = new System.Windows.Forms.Button();
@@ -103,13 +103,13 @@
             this.Usernametxb.TabIndex = 5;
             this.Usernametxb.Text = "Username";
             // 
-            // Password
+            // Passwordtxb
             // 
-            this.Password.Location = new System.Drawing.Point(359, 12);
-            this.Password.Name = "Password";
-            this.Password.Size = new System.Drawing.Size(100, 20);
-            this.Password.TabIndex = 6;
-            this.Password.Text = "Password";
+            this.Passwordtxb.Location = new System.Drawing.Point(359, 12);
+            this.Passwordtxb.Name = "Passwordtxb";
+            this.Passwordtxb.Size = new System.Drawing.Size(100, 20);
+            this.Passwordtxb.TabIndex = 6;
+            this.Passwordtxb.Text = "Password";
             // 
             // signinbtn
             // 
@@ -137,6 +137,7 @@
             this.signupbtn.TabIndex = 9;
             this.signupbtn.Text = "Sign Up";
             this.signupbtn.UseVisualStyleBackColor = true;
+            this.signupbtn.Click += new System.EventHandler(this.signupbtn_Click);
             // 
             // MainForm
             // 
@@ -147,7 +148,7 @@
             this.Controls.Add(this.signupbtn);
             this.Controls.Add(this.signoutbtn);
             this.Controls.Add(this.signinbtn);
-            this.Controls.Add(this.Password);
+            this.Controls.Add(this.Passwordtxb);
             this.Controls.Add(this.Usernametxb);
             this.Controls.Add(this.ExitAzmanSys);
             this.Controls.Add(this.AzmanSys_title);
@@ -169,7 +170,7 @@
         private System.Windows.Forms.Label AzmanSys_title;
         private System.Windows.Forms.Button ExitAzmanSys;
         private System.Windows.Forms.TextBox Usernametxb;
-        private System.Windows.Forms.TextBox Password;
+        private System.Windows.Forms.TextBox Passwordtxb;
         private System.Windows.Forms.Button signinbtn;
         private System.Windows.Forms.Button signoutbtn;
         private System.Windows.Forms.Button signupbtn;

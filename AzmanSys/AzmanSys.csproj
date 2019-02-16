@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dbConn\LoginDbConn.cs" />
     <Compile Include="Forms\BookingsForm.cs">
       <SubType>Form</SubType>
     </Compile>
