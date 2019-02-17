@@ -58,5 +58,14 @@ namespace AzmanSys
             }
             mysqlConn.connClose();
         }
+
+        private void signinbtn_Click(object sender, EventArgs e)
+        {
+            if (mysqlConn.connOpen() == true)
+            {
+                mysqlConn.ValidateLogin(Passwordtxb.Text, Usernametxb.Text);
+            }
+            mysqlConn.connClose();
+        }
     }
 }

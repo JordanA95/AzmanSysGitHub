@@ -20,5 +20,23 @@ namespace AzmanSys
             connClose();
         }
         //Inserts new login details into the SQL Database "tblUserLogin" by adding new username and password into the table.
+        public void ValidateLogin(string CusUsername, string CusPassword)
+        {
+            MySqlCommand comm = conn.CreateCommand();
+            comm.CommandText = "SELECT FROM 'tblUserLogin where CusUsername='"Usernametxb.text"' AND CusPassword='"Passwordtxb.text"'";
+            logincheck = ExecuteReader();
+            if(logincheck.read())
+            {
+                MessageBox.Show("Login sucessful");
+            }
+            else
+            {
+                MessageBox.Show("Invalid Login");
+            }
+            conn.Close();
+        }
+    }
+}
+
     }
 }
