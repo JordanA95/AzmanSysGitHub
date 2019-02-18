@@ -63,7 +63,7 @@ namespace AzmanSys
         {
             if (mysqlConn.connOpen() == true)
             {
-                mysqlConn.ValidateLogin(Passwordtxb.Text, Usernametxb.Text);
+                mysqlConn.ValidateLogin(Usernametxb.Text, Passwordtxb.Text);
             }
             mysqlConn.connClose();
         }

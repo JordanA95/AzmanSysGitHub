@@ -237,6 +237,7 @@
             this.Controls.Add(this.btnAdd);
             this.Name = "BookingsForm";
             this.Text = "Bookings";
+            this.Load += new System.EventHandler(this.BookingsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

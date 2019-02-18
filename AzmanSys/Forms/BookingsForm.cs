@@ -85,6 +85,11 @@ namespace AzmanSys
             Close();
             (new MainForm()).Show();
         }
+
+        private void BookingsForm_Load(object sender, EventArgs e)
+        {
+
+        }
         //Closes the BookingsForm and opens the MainForm.
     }
 }
