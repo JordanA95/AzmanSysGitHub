@@ -47,6 +47,7 @@
             this.Flights_title = new System.Windows.Forms.Label();
             this.btnMainMenu = new System.Windows.Forms.Button();
             this.Searchflightbtn = new System.Windows.Forms.Button();
+            this.flightsearchtxb = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -223,7 +224,7 @@
             // 
             // Searchflightbtn
             // 
-            this.Searchflightbtn.Location = new System.Drawing.Point(425, 198);
+            this.Searchflightbtn.Location = new System.Drawing.Point(646, 206);
             this.Searchflightbtn.Name = "Searchflightbtn";
             this.Searchflightbtn.Size = new System.Drawing.Size(108, 23);
             this.Searchflightbtn.TabIndex = 36;
@@ -231,12 +232,21 @@
             this.Searchflightbtn.UseVisualStyleBackColor = true;
             this.Searchflightbtn.Click += new System.EventHandler(this.Searchflightbtn_Click);
             // 
+            // flightsearchtxb
+            // 
+            this.flightsearchtxb.Location = new System.Drawing.Point(540, 208);
+            this.flightsearchtxb.Name = "flightsearchtxb";
+            this.flightsearchtxb.Size = new System.Drawing.Size(100, 20);
+            this.flightsearchtxb.TabIndex = 37;
+            this.flightsearchtxb.TextChanged += new System.EventHandler(this.flightsearchtxb_TextChanged);
+            // 
             // FlightsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(776, 469);
+            this.Controls.Add(this.flightsearchtxb);
             this.Controls.Add(this.Searchflightbtn);
             this.Controls.Add(this.btnMainMenu);
             this.Controls.Add(this.Flights_title);
@@ -285,5 +295,6 @@
         private System.Windows.Forms.Label Flights_title;
         private System.Windows.Forms.Button btnMainMenu;
         private System.Windows.Forms.Button Searchflightbtn;
+        private System.Windows.Forms.TextBox flightsearchtxb;
     }
 }

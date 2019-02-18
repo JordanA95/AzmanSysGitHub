@@ -1,4 +1,5 @@
 ﻿using System;
+using MySql.Data.MySqlClient;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -102,6 +103,18 @@ namespace AzmanSys
                 dataGridView1.DataSource = mysqlConn.qry("SELECT * FROM `tblFlight` where F_Departure_City='" + tbDepartureCity.Text + "' Or F_Arrival_City='" + tbArrivalCity.Text + "'").Tables[0];
             }
             mysqlConn.connClose();
+        }
+
+        private void flightsearchtxb_TextChanged(object sender, EventArgs e)
+        {
+            string search = flightsearchtxb.Text;
+            string filterData = search.ToString();
+
+            string query = "SELECT *  FROM `tblFlight` WHERE CONCAT( `FlightID`, `F_Depar_DateTime`, `F_Arrival_DateTime`, `F_Departure_City`, `F_Arrival_City`, `F_Price` ) like '%" + filterData +"%'";
+            MySqlDataAdapter records = new MySqlDataAdapter(query, mysqlConn.conn);
+            DataTable table = new DataTable();
+            records.Fill(table);
+            dataGridView1.DataSource = table;
         }
         //Searches the MySQL tblFlight database for flights matching the departure city and arrival city entered.
     }
