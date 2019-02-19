@@ -51,8 +51,20 @@ namespace AzmanSys
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            
-            if (mysqlConn.connOpen() == true)
+            if (tbPrice.Text == "")
+            {
+                MessageBox.Show("Please enter the ticket price");
+            }
+            else if (tbDepartureCity.Text == "")
+            {
+                MessageBox.Show("Please enter a departure city");
+            }
+            else if (tbArrivalCity.Text == "")
+            {
+                MessageBox.Show("Please enter an arrival city");
+            }
+            if (tbPrice.Text != "" & tbDepartureCity.Text != "" & tbArrivalCity.Text != "") //!= is checking that the textboxes are NOT empty 
+                if (mysqlConn.connOpen() == true)
             {
                 mysqlConn.updateFlight(tbFlightID.Text, dtDepartureDateTime.Text, dtArrivalDateTime.Text, tbDepartureCity.Text, tbArrivalCity.Text, tbPrice.Text);
                 dataGridView1.DataSource = mysqlConn.qry("SELECT * FROM `tblFlight`").Tables[0];

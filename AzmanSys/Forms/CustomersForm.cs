@@ -27,9 +27,26 @@ namespace AzmanSys
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (mysqlConn.connOpen() == true)
+            if (tbFName.Text == "")
             {
-                mysqlConn.insertCustomer(tbFName.Text, tbLName.Text, tbTel.Text);
+                MessageBox.Show("Please enter the customer's first name");
+            }
+            else if (tbLName.Text == "")
+            {
+                MessageBox.Show("Please enter the customer's last name");
+            }
+            else if (tbTel.Text == "")
+            {
+                MessageBox.Show("Please enter the customer's telephone number");
+            }
+            else if (tbNationality.Text == "")
+            {
+                MessageBox.Show("Please enter the customer's nationality");
+            }
+            if (tbFName.Text != "" & tbLName.Text != "" & tbTel.Text != "" & tbNationality.Text !="") //!= is checking that the textboxes are NOT empty
+                if (mysqlConn.connOpen() == true)
+            {
+                mysqlConn.insertCustomer(tbFName.Text, tbLName.Text, tbTel.Text, tbNationality.Text);
                 dataGridView1.DataSource = mysqlConn.qry("SELECT * FROM `tblCustomer`").Tables[0];
             }
             mysqlConn.connClose();
@@ -49,9 +66,26 @@ namespace AzmanSys
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (mysqlConn.connOpen() == true)
+            if (tbFName.Text == "")
             {
-                mysqlConn.updateCustomer(tbCustID.Text, tbFName.Text, tbLName.Text, tbTel.Text);
+                MessageBox.Show("Please enter the customer's first name");
+            }
+            else if (tbLName.Text == "")
+            {
+                MessageBox.Show("Please enter the customer's last name");
+            }
+            else if (tbTel.Text == "")
+            {
+                MessageBox.Show("Please enter the customer's telephone number");
+            }
+            else if (tbNationality.Text =="")
+            {
+                MessageBox.Show("Please enter the customer's nationality");
+            }
+            if (tbFName.Text != "" & tbLName.Text != "" & tbTel.Text != "" & tbNationality.Text != "") //!= is checking that the textboxes are NOT empty
+                if (mysqlConn.connOpen() == true)
+            {
+                mysqlConn.updateCustomer(tbCustID.Text, tbFName.Text, tbLName.Text, tbTel.Text, tbNationality.Text);
                 dataGridView1.DataSource = mysqlConn.qry("SELECT * FROM `tblCustomer`").Tables[0];
             }
             mysqlConn.connClose();

@@ -28,7 +28,20 @@ namespace AzmanSys
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (mysqlConn.connOpen() == true)
+            if (tbCustomerID.Text == "")
+            {
+                MessageBox.Show("Please enter the Customer ID");
+            }
+            else if (tbFlightID.Text == "")
+            {
+                MessageBox.Show("Please enter the Flight ID");
+            }
+            else if (tbBookingTotalCost.Text == "")
+            {
+                MessageBox.Show("Please enter the total cost of the booking");
+            }
+            if (tbCustomerID.Text != "" & tbFlightID.Text != "" & tbBookingTotalCost.Text != "") //!= is checking that the textboxes are NOT empty
+                if (mysqlConn.connOpen() == true)
             {
                 mysqlConn.addBooking(tbBookingID.Text, tbCustomerID.Text, tbFlightID.Text, dtBookingDateTime.Text, tbBookingTotalCost.Text);
                 dataGridView1.DataSource = mysqlConn.qry("SELECT * FROM `tblBooking`").Tables[0];
@@ -39,7 +52,20 @@ namespace AzmanSys
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (mysqlConn.connOpen() == true)
+            if (tbCustomerID.Text == "")
+            {
+                MessageBox.Show("Please enter the Customer ID");
+            }
+            else if (tbFlightID.Text == "")
+            {
+                MessageBox.Show("Please enter the Flight ID");
+            }
+            else if (tbBookingTotalCost.Text == "")
+            {
+                MessageBox.Show("Please enter the total cost of the booking");
+            }
+            if (tbCustomerID.Text != "" & tbFlightID.Text != "" & tbBookingTotalCost.Text != "") //!= is checking that the textboxes are NOT empty
+                if (mysqlConn.connOpen() == true)
             {
                 mysqlConn.updateBooking(tbBookingID.Text, tbCustomerID.Text, tbFlightID.Text, dtBookingDateTime.Text, tbBookingTotalCost.Text);
                 dataGridView1.DataSource = mysqlConn.qry("SELECT * FROM `tblBooking`").Tables[0];

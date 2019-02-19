@@ -42,6 +42,8 @@
             this.tbTel = new System.Windows.Forms.TextBox();
             this.Customers_title = new System.Windows.Forms.Label();
             this.btnMainMenu = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tbNationality = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -180,12 +182,30 @@
             this.btnMainMenu.UseVisualStyleBackColor = false;
             this.btnMainMenu.Click += new System.EventHandler(this.btnMainMenu_Click_1);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(291, 79);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(56, 13);
+            this.label5.TabIndex = 36;
+            this.label5.Text = "Nationality";
+            // 
+            // tbNationality
+            // 
+            this.tbNationality.Location = new System.Drawing.Point(360, 76);
+            this.tbNationality.Name = "tbNationality";
+            this.tbNationality.Size = new System.Drawing.Size(100, 20);
+            this.tbNationality.TabIndex = 37;
+            // 
             // CustomersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.tbNationality);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnMainMenu);
             this.Controls.Add(this.Customers_title);
             this.Controls.Add(this.tbTel);
@@ -224,5 +244,7 @@
         private System.Windows.Forms.TextBox tbTel;
         private System.Windows.Forms.Label Customers_title;
         private System.Windows.Forms.Button btnMainMenu;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox tbNationality;
     }
 }

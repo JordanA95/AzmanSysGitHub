@@ -10,26 +10,28 @@ namespace AzmanSys
 {
     class customerDbConn: dbConn
     {
-        public void insertCustomer(string CusFName, string CusLName, string CusTelNum)
+        public void insertCustomer(string CusFName, string CusLName, string CusTelNum, string CusNationality)
         {
             MySqlCommand comm = conn.CreateCommand();
-            comm.CommandText = "INSERT INTO `tblCustomer` (`CusID`, `CusFName`, `CusLName`, `CusTelNum`) VALUES (NULL,@CusFName, @CusLName, @CusTelNum);";
+            comm.CommandText = "INSERT INTO `tblCustomer` (`CusID`, `CusFName`, `CusLName`, `CusTelNum`, 'CusNationality') VALUES (NULL,@CusFName, @CusLName, @CusTelNum, @CusNationality);";
             comm.Parameters.AddWithValue("@CusFName", CusFName);
             comm.Parameters.AddWithValue("@CusLName", CusLName);
             comm.Parameters.AddWithValue("@CusTelNum", CusTelNum);
+            comm.Parameters.AddWithValue("@CusNationality", CusNationality);
             comm.ExecuteNonQuery();
             connClose();
         }
         //Inserts the details of a new customer into the SQL Database "tblCustomer" by adding customer details into the table.
 
-        public void updateCustomer(string CusID, string FName, string LName, string TelNum)
+        public void updateCustomer(string CusID, string FName, string LName, string TelNum, string CusNationality)
         {
             MySqlCommand comm = conn.CreateCommand();
-            comm.CommandText = "UPDATE `tblCustomer` SET CusFName=@FName, CusLName=@LName, CusTelNum=@TelNum WHERE CusID=@CusID;";
+            comm.CommandText = "UPDATE `tblCustomer` SET CusFName=@FName, CusLName=@LName, CusTelNum=@TelNum, CusNationality=@CusNationality WHERE CusID=@CusID;";
+            comm.Parameters.AddWithValue("@CusID", CusID);
             comm.Parameters.AddWithValue("@FName", FName);
             comm.Parameters.AddWithValue("@LName", LName);
             comm.Parameters.AddWithValue("@TelNum", TelNum);
-            comm.Parameters.AddWithValue("@CusID", CusID);
+            comm.Parameters.AddWithValue("@CusNationality", CusNationality);
             comm.ExecuteNonQuery();
             connClose();
         }
