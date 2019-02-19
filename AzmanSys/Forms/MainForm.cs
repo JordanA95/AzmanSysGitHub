@@ -49,23 +49,5 @@ namespace AzmanSys
         {
             Application.Exit(); //closes the whole application
         }
-
-        private void signupbtn_Click(object sender, EventArgs e)
-        {
-            if (mysqlConn.connOpen() == true)
-            {
-                mysqlConn.insertNewUser(Passwordtxb.Text, Usernametxb.Text);
-            }
-            mysqlConn.connClose();
-        }
-
-        private void signinbtn_Click(object sender, EventArgs e)
-        {
-            if (mysqlConn.connOpen() == true)
-            {
-                mysqlConn.ValidateLogin(Usernametxb.Text, Passwordtxb.Text);
-            }
-            mysqlConn.connClose();
-        }
     }
 }

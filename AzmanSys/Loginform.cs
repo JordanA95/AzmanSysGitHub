@@ -42,12 +42,12 @@ namespace AzmanSys
                 t = Convert.ToInt32(table.Rows[0][0].ToString());
                 if(t == 1)
                 {
-                    MessageBox.Show("DONE");
+                    MessageBox.Show("Login Successful");
                     Close();
                     (new MainForm()).Show();
                 } else
                 {
-                    MessageBox.Show("Sorry");
+                    MessageBox.Show("Incorrect Username or Password");
                 }
 
             }

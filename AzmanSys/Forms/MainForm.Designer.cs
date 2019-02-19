@@ -33,11 +33,6 @@
             this.btnManageBookings = new System.Windows.Forms.Button();
             this.AzmanSys_title = new System.Windows.Forms.Label();
             this.ExitAzmanSys = new System.Windows.Forms.Button();
-            this.Usernametxb = new System.Windows.Forms.TextBox();
-            this.Passwordtxb = new System.Windows.Forms.TextBox();
-            this.signinbtn = new System.Windows.Forms.Button();
-            this.signoutbtn = new System.Windows.Forms.Button();
-            this.signupbtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnManageCustomers
@@ -78,7 +73,7 @@
             this.AzmanSys_title.AutoSize = true;
             this.AzmanSys_title.Font = new System.Drawing.Font("Comic Sans MS", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AzmanSys_title.ForeColor = System.Drawing.Color.Blue;
-            this.AzmanSys_title.Location = new System.Drawing.Point(28, 9);
+            this.AzmanSys_title.Location = new System.Drawing.Point(131, 9);
             this.AzmanSys_title.Name = "AzmanSys_title";
             this.AzmanSys_title.Size = new System.Drawing.Size(200, 52);
             this.AzmanSys_title.TabIndex = 3;
@@ -95,62 +90,12 @@
             this.ExitAzmanSys.UseVisualStyleBackColor = false;
             this.ExitAzmanSys.Click += new System.EventHandler(this.ExitAzmanSys_Click);
             // 
-            // Usernametxb
-            // 
-            this.Usernametxb.Location = new System.Drawing.Point(253, 12);
-            this.Usernametxb.Name = "Usernametxb";
-            this.Usernametxb.Size = new System.Drawing.Size(100, 20);
-            this.Usernametxb.TabIndex = 5;
-            this.Usernametxb.Text = "Username";
-            // 
-            // Passwordtxb
-            // 
-            this.Passwordtxb.Location = new System.Drawing.Point(359, 12);
-            this.Passwordtxb.Name = "Passwordtxb";
-            this.Passwordtxb.Size = new System.Drawing.Size(100, 20);
-            this.Passwordtxb.TabIndex = 6;
-            this.Passwordtxb.Text = "Password";
-            // 
-            // signinbtn
-            // 
-            this.signinbtn.Location = new System.Drawing.Point(465, 9);
-            this.signinbtn.Name = "signinbtn";
-            this.signinbtn.Size = new System.Drawing.Size(75, 23);
-            this.signinbtn.TabIndex = 7;
-            this.signinbtn.Text = "Sign In";
-            this.signinbtn.UseVisualStyleBackColor = true;
-            this.signinbtn.Click += new System.EventHandler(this.signinbtn_Click);
-            // 
-            // signoutbtn
-            // 
-            this.signoutbtn.Location = new System.Drawing.Point(465, 68);
-            this.signoutbtn.Name = "signoutbtn";
-            this.signoutbtn.Size = new System.Drawing.Size(75, 23);
-            this.signoutbtn.TabIndex = 8;
-            this.signoutbtn.Text = "Sign Out";
-            this.signoutbtn.UseVisualStyleBackColor = true;
-            // 
-            // signupbtn
-            // 
-            this.signupbtn.Location = new System.Drawing.Point(465, 39);
-            this.signupbtn.Name = "signupbtn";
-            this.signupbtn.Size = new System.Drawing.Size(75, 23);
-            this.signupbtn.TabIndex = 9;
-            this.signupbtn.Text = "Sign Up";
-            this.signupbtn.UseVisualStyleBackColor = true;
-            this.signupbtn.Click += new System.EventHandler(this.signupbtn_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(552, 225);
-            this.Controls.Add(this.signupbtn);
-            this.Controls.Add(this.signoutbtn);
-            this.Controls.Add(this.signinbtn);
-            this.Controls.Add(this.Passwordtxb);
-            this.Controls.Add(this.Usernametxb);
+            this.ClientSize = new System.Drawing.Size(476, 225);
             this.Controls.Add(this.ExitAzmanSys);
             this.Controls.Add(this.AzmanSys_title);
             this.Controls.Add(this.btnManageBookings);
@@ -170,11 +115,6 @@
         private System.Windows.Forms.Button btnManageBookings;
         private System.Windows.Forms.Label AzmanSys_title;
         private System.Windows.Forms.Button ExitAzmanSys;
-        private System.Windows.Forms.TextBox Usernametxb;
-        private System.Windows.Forms.TextBox Passwordtxb;
-        private System.Windows.Forms.Button signinbtn;
-        private System.Windows.Forms.Button signoutbtn;
-        private System.Windows.Forms.Button signupbtn;
     }
 }
 
