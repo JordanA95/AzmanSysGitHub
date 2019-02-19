@@ -57,6 +57,19 @@
             this.adultpricelbl = new System.Windows.Forms.Label();
             this.childpricelbl = new System.Windows.Forms.Label();
             this.infantpricelbl = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.numberofadulttxb = new System.Windows.Forms.TextBox();
+            this.numberofchildtxb = new System.Windows.Forms.TextBox();
+            this.numberofinfanttxb = new System.Windows.Forms.TextBox();
+            this.numberofinfantlbl = new System.Windows.Forms.Label();
+            this.numberofchildlbl = new System.Windows.Forms.Label();
+            this.numberofadultlbl = new System.Windows.Forms.Label();
+            this.totalinfantlbl = new System.Windows.Forms.Label();
+            this.totalchildlbl = new System.Windows.Forms.Label();
+            this.totaladultlbl = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,7 +128,7 @@
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnDelete.Location = new System.Drawing.Point(303, 186);
+            this.btnDelete.Location = new System.Drawing.Point(290, 222);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 15;
@@ -126,7 +139,7 @@
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnUpdate.Location = new System.Drawing.Point(213, 186);
+            this.btnUpdate.Location = new System.Drawing.Point(200, 222);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnUpdate.TabIndex = 14;
@@ -137,7 +150,7 @@
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnAdd.Location = new System.Drawing.Point(120, 186);
+            this.btnAdd.Location = new System.Drawing.Point(107, 222);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 13;
@@ -150,7 +163,7 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(65, 251);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 251);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -224,7 +237,7 @@
             // btnMainMenu
             // 
             this.btnMainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnMainMenu.Location = new System.Drawing.Point(763, 12);
+            this.btnMainMenu.Location = new System.Drawing.Point(12, 9);
             this.btnMainMenu.Name = "btnMainMenu";
             this.btnMainMenu.Size = new System.Drawing.Size(136, 23);
             this.btnMainMenu.TabIndex = 34;
@@ -234,7 +247,7 @@
             // 
             // Searchflightbtn
             // 
-            this.Searchflightbtn.Location = new System.Drawing.Point(646, 206);
+            this.Searchflightbtn.Location = new System.Drawing.Point(306, 175);
             this.Searchflightbtn.Name = "Searchflightbtn";
             this.Searchflightbtn.Size = new System.Drawing.Size(108, 23);
             this.Searchflightbtn.TabIndex = 36;
@@ -244,7 +257,7 @@
             // 
             // flightsearchtxb
             // 
-            this.flightsearchtxb.Location = new System.Drawing.Point(540, 208);
+            this.flightsearchtxb.Location = new System.Drawing.Point(200, 177);
             this.flightsearchtxb.Name = "flightsearchtxb";
             this.flightsearchtxb.Size = new System.Drawing.Size(100, 20);
             this.flightsearchtxb.TabIndex = 37;
@@ -253,7 +266,7 @@
             // Pricingexplainedlbl
             // 
             this.Pricingexplainedlbl.AutoSize = true;
-            this.Pricingexplainedlbl.Location = new System.Drawing.Point(609, 61);
+            this.Pricingexplainedlbl.Location = new System.Drawing.Point(602, 34);
             this.Pricingexplainedlbl.Name = "Pricingexplainedlbl";
             this.Pricingexplainedlbl.Size = new System.Drawing.Size(193, 13);
             this.Pricingexplainedlbl.TabIndex = 38;
@@ -262,7 +275,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(609, 74);
+            this.label7.Location = new System.Drawing.Point(602, 47);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(293, 13);
             this.label7.TabIndex = 39;
@@ -271,33 +284,33 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(698, 122);
+            this.label8.Location = new System.Drawing.Point(671, 98);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(75, 13);
+            this.label8.Size = new System.Drawing.Size(98, 13);
             this.label8.TabIndex = 40;
-            this.label8.Text = "Price for Child:";
+            this.label8.Text = "Price for One Child:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(694, 149);
+            this.label9.Location = new System.Drawing.Point(664, 117);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(79, 13);
+            this.label9.Size = new System.Drawing.Size(102, 13);
             this.label9.TabIndex = 41;
-            this.label9.Text = "Price for Infant:";
+            this.label9.Text = "Price for One Infant:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(697, 98);
+            this.label10.Location = new System.Drawing.Point(634, 71);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(76, 13);
+            this.label10.Size = new System.Drawing.Size(132, 13);
             this.label10.TabIndex = 44;
-            this.label10.Text = "Price for Adult:";
+            this.label10.Text = "Ticket Price for One Adult:";
             // 
             // calculatepricesbtn
             // 
-            this.calculatepricesbtn.Location = new System.Drawing.Point(779, 172);
+            this.calculatepricesbtn.Location = new System.Drawing.Point(793, 246);
             this.calculatepricesbtn.Name = "calculatepricesbtn";
             this.calculatepricesbtn.Size = new System.Drawing.Size(100, 23);
             this.calculatepricesbtn.TabIndex = 48;
@@ -308,7 +321,7 @@
             // adultpricelbl
             // 
             this.adultpricelbl.AutoSize = true;
-            this.adultpricelbl.Location = new System.Drawing.Point(779, 100);
+            this.adultpricelbl.Location = new System.Drawing.Point(772, 71);
             this.adultpricelbl.Name = "adultpricelbl";
             this.adultpricelbl.Size = new System.Drawing.Size(16, 13);
             this.adultpricelbl.TabIndex = 49;
@@ -317,7 +330,7 @@
             // childpricelbl
             // 
             this.childpricelbl.AutoSize = true;
-            this.childpricelbl.Location = new System.Drawing.Point(779, 122);
+            this.childpricelbl.Location = new System.Drawing.Point(772, 98);
             this.childpricelbl.Name = "childpricelbl";
             this.childpricelbl.Size = new System.Drawing.Size(16, 13);
             this.childpricelbl.TabIndex = 50;
@@ -326,11 +339,125 @@
             // infantpricelbl
             // 
             this.infantpricelbl.AutoSize = true;
-            this.infantpricelbl.Location = new System.Drawing.Point(779, 149);
+            this.infantpricelbl.Location = new System.Drawing.Point(772, 117);
             this.infantpricelbl.Name = "infantpricelbl";
             this.infantpricelbl.Size = new System.Drawing.Size(16, 13);
             this.infantpricelbl.TabIndex = 51;
             this.infantpricelbl.Text = "...";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(604, 149);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(194, 13);
+            this.label11.TabIndex = 52;
+            this.label11.Text = "Please enter the number of passengers:";
+            // 
+            // numberofadulttxb
+            // 
+            this.numberofadulttxb.Location = new System.Drawing.Point(793, 175);
+            this.numberofadulttxb.Name = "numberofadulttxb";
+            this.numberofadulttxb.Size = new System.Drawing.Size(100, 20);
+            this.numberofadulttxb.TabIndex = 53;
+            this.numberofadulttxb.Text = "1";
+            // 
+            // numberofchildtxb
+            // 
+            this.numberofchildtxb.Location = new System.Drawing.Point(793, 197);
+            this.numberofchildtxb.Name = "numberofchildtxb";
+            this.numberofchildtxb.Size = new System.Drawing.Size(100, 20);
+            this.numberofchildtxb.TabIndex = 54;
+            this.numberofchildtxb.Text = "1";
+            // 
+            // numberofinfanttxb
+            // 
+            this.numberofinfanttxb.Location = new System.Drawing.Point(793, 220);
+            this.numberofinfanttxb.Name = "numberofinfanttxb";
+            this.numberofinfanttxb.Size = new System.Drawing.Size(100, 20);
+            this.numberofinfanttxb.TabIndex = 55;
+            this.numberofinfanttxb.Text = "1";
+            // 
+            // numberofinfantlbl
+            // 
+            this.numberofinfantlbl.AutoSize = true;
+            this.numberofinfantlbl.Location = new System.Drawing.Point(702, 223);
+            this.numberofinfantlbl.Name = "numberofinfantlbl";
+            this.numberofinfantlbl.Size = new System.Drawing.Size(89, 13);
+            this.numberofinfantlbl.TabIndex = 56;
+            this.numberofinfantlbl.Text = "Number of Infant:";
+            // 
+            // numberofchildlbl
+            // 
+            this.numberofchildlbl.AutoSize = true;
+            this.numberofchildlbl.Location = new System.Drawing.Point(702, 197);
+            this.numberofchildlbl.Name = "numberofchildlbl";
+            this.numberofchildlbl.Size = new System.Drawing.Size(85, 13);
+            this.numberofchildlbl.TabIndex = 57;
+            this.numberofchildlbl.Text = "Number of Child:";
+            // 
+            // numberofadultlbl
+            // 
+            this.numberofadultlbl.AutoSize = true;
+            this.numberofadultlbl.Location = new System.Drawing.Point(702, 175);
+            this.numberofadultlbl.Name = "numberofadultlbl";
+            this.numberofadultlbl.Size = new System.Drawing.Size(86, 13);
+            this.numberofadultlbl.TabIndex = 58;
+            this.numberofadultlbl.Text = "Number of Adult:";
+            // 
+            // totalinfantlbl
+            // 
+            this.totalinfantlbl.AutoSize = true;
+            this.totalinfantlbl.Location = new System.Drawing.Point(840, 341);
+            this.totalinfantlbl.Name = "totalinfantlbl";
+            this.totalinfantlbl.Size = new System.Drawing.Size(16, 13);
+            this.totalinfantlbl.TabIndex = 64;
+            this.totalinfantlbl.Text = "...";
+            // 
+            // totalchildlbl
+            // 
+            this.totalchildlbl.AutoSize = true;
+            this.totalchildlbl.Location = new System.Drawing.Point(840, 322);
+            this.totalchildlbl.Name = "totalchildlbl";
+            this.totalchildlbl.Size = new System.Drawing.Size(16, 13);
+            this.totalchildlbl.TabIndex = 63;
+            this.totalchildlbl.Text = "...";
+            // 
+            // totaladultlbl
+            // 
+            this.totaladultlbl.AutoSize = true;
+            this.totaladultlbl.Location = new System.Drawing.Point(840, 295);
+            this.totaladultlbl.Name = "totaladultlbl";
+            this.totaladultlbl.Size = new System.Drawing.Size(16, 13);
+            this.totaladultlbl.TabIndex = 62;
+            this.totaladultlbl.Text = "...";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(702, 295);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(122, 13);
+            this.label15.TabIndex = 61;
+            this.label15.Text = "Total Price for All Adults:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(699, 341);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(125, 13);
+            this.label16.TabIndex = 60;
+            this.label16.Text = "Total Price for All Infants:";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(693, 322);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(131, 13);
+            this.label17.TabIndex = 59;
+            this.label17.Text = "Total Price for All Children:";
             // 
             // FlightsForm
             // 
@@ -338,6 +465,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(911, 469);
+            this.Controls.Add(this.totalinfantlbl);
+            this.Controls.Add(this.totalchildlbl);
+            this.Controls.Add(this.totaladultlbl);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.numberofadultlbl);
+            this.Controls.Add(this.numberofchildlbl);
+            this.Controls.Add(this.numberofinfantlbl);
+            this.Controls.Add(this.numberofinfanttxb);
+            this.Controls.Add(this.numberofchildtxb);
+            this.Controls.Add(this.numberofadulttxb);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.infantpricelbl);
             this.Controls.Add(this.childpricelbl);
             this.Controls.Add(this.adultpricelbl);
@@ -406,5 +546,18 @@
         private System.Windows.Forms.Label adultpricelbl;
         private System.Windows.Forms.Label childpricelbl;
         private System.Windows.Forms.Label infantpricelbl;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox numberofadulttxb;
+        private System.Windows.Forms.TextBox numberofchildtxb;
+        private System.Windows.Forms.TextBox numberofinfanttxb;
+        private System.Windows.Forms.Label numberofinfantlbl;
+        private System.Windows.Forms.Label numberofchildlbl;
+        private System.Windows.Forms.Label numberofadultlbl;
+        private System.Windows.Forms.Label totalinfantlbl;
+        private System.Windows.Forms.Label totalchildlbl;
+        private System.Windows.Forms.Label totaladultlbl;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
     }
 }

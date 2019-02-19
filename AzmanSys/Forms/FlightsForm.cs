@@ -151,14 +151,26 @@ namespace AzmanSys
         private void calculatepricesbtn_Click(object sender, EventArgs e)
         {
             int Priceforadult = int.Parse(tbPrice.Text);
-            int Priceforchild = Priceforadult / 100 * 80;
-            int Priceforinfant = Priceforadult / 100 * 70;
+            int Priceforchild = Priceforadult / 100 * 50;
+            int Priceforinfant = Priceforadult / 100 * 10;
             string adultprice = Priceforadult.ToString();
             string childprice = Priceforchild.ToString();
             string infantprice = Priceforinfant.ToString();
             adultpricelbl.Text = adultprice;
             childpricelbl.Text = childprice;
             infantpricelbl.Text = infantprice;
+            int totaladult = int.Parse(numberofadulttxb.Text);
+            int totalchild = int.Parse(numberofchildtxb.Text);
+            int totalinfant = int.Parse(numberofinfanttxb.Text);
+            int totaladultcost = (totaladult * Priceforadult);
+            int totalchildcost = (totalchild * Priceforchild);
+            int totalinfantcost = (totalinfant * Priceforinfant);
+            string totaladultprice = totaladultcost.ToString();
+            string totalchildprice = totalchildcost.ToString();
+            string totalinfantprice = totalinfantcost.ToString();
+            totaladultlbl.Text = totaladultprice;
+            totalchildlbl.Text = totalchildprice;
+            totalinfantlbl.Text = totalinfantprice;
         }
         //When the adult ticket cost is typed into the tbPrice textbox, the cost for child and infant is calculated.
     }
