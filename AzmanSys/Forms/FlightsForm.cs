@@ -140,5 +140,26 @@ namespace AzmanSys
             dataGridView1.DataSource = table;
         }
         //Searches the MySQL tblFlight database for flights matching the departure city and arrival city entered.
+
+        private void tbPrice_TextChanged(object sender, EventArgs e)
+        {
+            int Priceforadult = int.Parse(tbPrice.Text);
+            int Priceforchild = Priceforadult / 100 * 80;
+            int Priceforinfant = Priceforadult / 100 * 70;
+        }
+
+        private void calculatepricesbtn_Click(object sender, EventArgs e)
+        {
+            int Priceforadult = int.Parse(tbPrice.Text);
+            int Priceforchild = Priceforadult / 100 * 80;
+            int Priceforinfant = Priceforadult / 100 * 70;
+            string adultprice = Priceforadult.ToString();
+            string childprice = Priceforchild.ToString();
+            string infantprice = Priceforinfant.ToString();
+            adultpricelbl.Text = adultprice;
+            childpricelbl.Text = childprice;
+            infantpricelbl.Text = infantprice;
+        }
+        //When the adult ticket cost is typed into the tbPrice textbox, the cost for child and infant is calculated.
     }
 }

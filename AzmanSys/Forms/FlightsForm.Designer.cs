@@ -48,12 +48,21 @@
             this.btnMainMenu = new System.Windows.Forms.Button();
             this.Searchflightbtn = new System.Windows.Forms.Button();
             this.flightsearchtxb = new System.Windows.Forms.TextBox();
+            this.Pricingexplainedlbl = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.calculatepricesbtn = new System.Windows.Forms.Button();
+            this.adultpricelbl = new System.Windows.Forms.Label();
+            this.childpricelbl = new System.Windows.Forms.Label();
+            this.infantpricelbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tbDepartureCity
             // 
-            this.tbDepartureCity.Location = new System.Drawing.Point(530, 103);
+            this.tbDepartureCity.Location = new System.Drawing.Point(492, 98);
             this.tbDepartureCity.Name = "tbDepartureCity";
             this.tbDepartureCity.Size = new System.Drawing.Size(100, 20);
             this.tbDepartureCity.TabIndex = 24;
@@ -70,7 +79,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(443, 106);
+            this.label4.Location = new System.Drawing.Point(405, 101);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(74, 13);
             this.label4.TabIndex = 19;
@@ -152,19 +161,20 @@
             // 
             // tbPrice
             // 
-            this.tbPrice.Location = new System.Drawing.Point(530, 71);
+            this.tbPrice.Location = new System.Drawing.Point(492, 66);
             this.tbPrice.Name = "tbPrice";
             this.tbPrice.Size = new System.Drawing.Size(100, 20);
             this.tbPrice.TabIndex = 23;
+            this.tbPrice.TextChanged += new System.EventHandler(this.tbPrice_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(453, 71);
+            this.label6.Location = new System.Drawing.Point(405, 66);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(31, 13);
+            this.label6.Size = new System.Drawing.Size(73, 13);
             this.label6.TabIndex = 28;
-            this.label6.Text = "Price";
+            this.label6.Text = "Price for Adult";
             // 
             // dtArrivalDateTime
             // 
@@ -186,7 +196,7 @@
             // 
             // tbArrivalCity
             // 
-            this.tbArrivalCity.Location = new System.Drawing.Point(530, 139);
+            this.tbArrivalCity.Location = new System.Drawing.Point(492, 134);
             this.tbArrivalCity.Name = "tbArrivalCity";
             this.tbArrivalCity.Size = new System.Drawing.Size(100, 20);
             this.tbArrivalCity.TabIndex = 25;
@@ -194,7 +204,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(443, 146);
+            this.label5.Location = new System.Drawing.Point(405, 141);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 13);
             this.label5.TabIndex = 32;
@@ -214,7 +224,7 @@
             // btnMainMenu
             // 
             this.btnMainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnMainMenu.Location = new System.Drawing.Point(628, 12);
+            this.btnMainMenu.Location = new System.Drawing.Point(763, 12);
             this.btnMainMenu.Name = "btnMainMenu";
             this.btnMainMenu.Size = new System.Drawing.Size(136, 23);
             this.btnMainMenu.TabIndex = 34;
@@ -240,12 +250,103 @@
             this.flightsearchtxb.TabIndex = 37;
             this.flightsearchtxb.TextChanged += new System.EventHandler(this.flightsearchtxb_TextChanged);
             // 
+            // Pricingexplainedlbl
+            // 
+            this.Pricingexplainedlbl.AutoSize = true;
+            this.Pricingexplainedlbl.Location = new System.Drawing.Point(609, 61);
+            this.Pricingexplainedlbl.Name = "Pricingexplainedlbl";
+            this.Pricingexplainedlbl.Size = new System.Drawing.Size(193, 13);
+            this.Pricingexplainedlbl.TabIndex = 38;
+            this.Pricingexplainedlbl.Text = "Please Note price displayed is for Adult.";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(609, 74);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(293, 13);
+            this.label7.TabIndex = 39;
+            this.label7.Text = "Children get a 20% discount, and Infants get a 30% discount.";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(698, 122);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(75, 13);
+            this.label8.TabIndex = 40;
+            this.label8.Text = "Price for Child:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(694, 149);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(79, 13);
+            this.label9.TabIndex = 41;
+            this.label9.Text = "Price for Infant:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(697, 98);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(76, 13);
+            this.label10.TabIndex = 44;
+            this.label10.Text = "Price for Adult:";
+            // 
+            // calculatepricesbtn
+            // 
+            this.calculatepricesbtn.Location = new System.Drawing.Point(779, 172);
+            this.calculatepricesbtn.Name = "calculatepricesbtn";
+            this.calculatepricesbtn.Size = new System.Drawing.Size(100, 23);
+            this.calculatepricesbtn.TabIndex = 48;
+            this.calculatepricesbtn.Text = "Calculate Prices";
+            this.calculatepricesbtn.UseVisualStyleBackColor = true;
+            this.calculatepricesbtn.Click += new System.EventHandler(this.calculatepricesbtn_Click);
+            // 
+            // adultpricelbl
+            // 
+            this.adultpricelbl.AutoSize = true;
+            this.adultpricelbl.Location = new System.Drawing.Point(779, 100);
+            this.adultpricelbl.Name = "adultpricelbl";
+            this.adultpricelbl.Size = new System.Drawing.Size(16, 13);
+            this.adultpricelbl.TabIndex = 49;
+            this.adultpricelbl.Text = "...";
+            // 
+            // childpricelbl
+            // 
+            this.childpricelbl.AutoSize = true;
+            this.childpricelbl.Location = new System.Drawing.Point(779, 122);
+            this.childpricelbl.Name = "childpricelbl";
+            this.childpricelbl.Size = new System.Drawing.Size(16, 13);
+            this.childpricelbl.TabIndex = 50;
+            this.childpricelbl.Text = "...";
+            // 
+            // infantpricelbl
+            // 
+            this.infantpricelbl.AutoSize = true;
+            this.infantpricelbl.Location = new System.Drawing.Point(779, 149);
+            this.infantpricelbl.Name = "infantpricelbl";
+            this.infantpricelbl.Size = new System.Drawing.Size(16, 13);
+            this.infantpricelbl.TabIndex = 51;
+            this.infantpricelbl.Text = "...";
+            // 
             // FlightsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(776, 469);
+            this.ClientSize = new System.Drawing.Size(911, 469);
+            this.Controls.Add(this.infantpricelbl);
+            this.Controls.Add(this.childpricelbl);
+            this.Controls.Add(this.adultpricelbl);
+            this.Controls.Add(this.calculatepricesbtn);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.Pricingexplainedlbl);
             this.Controls.Add(this.flightsearchtxb);
             this.Controls.Add(this.Searchflightbtn);
             this.Controls.Add(this.btnMainMenu);
@@ -296,5 +397,14 @@
         private System.Windows.Forms.Button btnMainMenu;
         private System.Windows.Forms.Button Searchflightbtn;
         private System.Windows.Forms.TextBox flightsearchtxb;
+        private System.Windows.Forms.Label Pricingexplainedlbl;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button calculatepricesbtn;
+        private System.Windows.Forms.Label adultpricelbl;
+        private System.Windows.Forms.Label childpricelbl;
+        private System.Windows.Forms.Label infantpricelbl;
     }
 }
