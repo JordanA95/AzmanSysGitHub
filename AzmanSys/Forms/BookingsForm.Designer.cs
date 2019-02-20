@@ -45,6 +45,8 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnMainMenu = new System.Windows.Forms.Button();
             this.Bookings_title = new System.Windows.Forms.Label();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printbookingsbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -212,12 +214,24 @@
             this.Bookings_title.TabIndex = 37;
             this.Bookings_title.Text = "Bookings";
             // 
+            // printbookingsbtn
+            // 
+            this.printbookingsbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.printbookingsbtn.Location = new System.Drawing.Point(665, 60);
+            this.printbookingsbtn.Name = "printbookingsbtn";
+            this.printbookingsbtn.Size = new System.Drawing.Size(75, 23);
+            this.printbookingsbtn.TabIndex = 38;
+            this.printbookingsbtn.Text = "Print";
+            this.printbookingsbtn.UseVisualStyleBackColor = false;
+            this.printbookingsbtn.Click += new System.EventHandler(this.printbookingsbtn_Click);
+            // 
             // BookingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.printbookingsbtn);
             this.Controls.Add(this.Bookings_title);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnMainMenu);
@@ -262,5 +276,7 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnMainMenu;
         private System.Windows.Forms.Label Bookings_title;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.Button printbookingsbtn;
     }
 }

@@ -44,6 +44,8 @@
             this.btnMainMenu = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.tbNationality = new System.Windows.Forms.TextBox();
+            this.printcustomersbtn = new System.Windows.Forms.Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -198,12 +200,24 @@
             this.tbNationality.Size = new System.Drawing.Size(100, 20);
             this.tbNationality.TabIndex = 37;
             // 
+            // printcustomersbtn
+            // 
+            this.printcustomersbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.printcustomersbtn.Location = new System.Drawing.Point(648, 66);
+            this.printcustomersbtn.Name = "printcustomersbtn";
+            this.printcustomersbtn.Size = new System.Drawing.Size(75, 23);
+            this.printcustomersbtn.TabIndex = 38;
+            this.printcustomersbtn.Text = "Print";
+            this.printcustomersbtn.UseVisualStyleBackColor = false;
+            this.printcustomersbtn.Click += new System.EventHandler(this.printcustomersbtn_Click);
+            // 
             // CustomersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.printcustomersbtn);
             this.Controls.Add(this.tbNationality);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnMainMenu);
@@ -246,5 +260,7 @@
         private System.Windows.Forms.Button btnMainMenu;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tbNationality;
+        private System.Windows.Forms.Button printcustomersbtn;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

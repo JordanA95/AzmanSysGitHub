@@ -70,6 +70,8 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printflightsbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -459,12 +461,24 @@
             this.label17.TabIndex = 59;
             this.label17.Text = "Total Price for All Children:";
             // 
+            // printflightsbtn
+            // 
+            this.printflightsbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.printflightsbtn.Location = new System.Drawing.Point(775, 396);
+            this.printflightsbtn.Name = "printflightsbtn";
+            this.printflightsbtn.Size = new System.Drawing.Size(75, 23);
+            this.printflightsbtn.TabIndex = 65;
+            this.printflightsbtn.Text = "Print";
+            this.printflightsbtn.UseVisualStyleBackColor = false;
+            this.printflightsbtn.Click += new System.EventHandler(this.printflightsbtn_Click);
+            // 
             // FlightsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(911, 469);
+            this.Controls.Add(this.printflightsbtn);
             this.Controls.Add(this.totalinfantlbl);
             this.Controls.Add(this.totalchildlbl);
             this.Controls.Add(this.totaladultlbl);
@@ -559,5 +573,7 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.Button printflightsbtn;
     }
 }

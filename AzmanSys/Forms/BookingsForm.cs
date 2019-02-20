@@ -1,8 +1,10 @@
 ﻿using System;
+using MySql.Data.MySqlClient;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -111,11 +113,40 @@ namespace AzmanSys
             Close();
             (new MainForm()).Show();
         }
+        //Closes the BookingsForm and opens the MainForm.
 
         private void BookingsForm_Load(object sender, EventArgs e)
         {
 
         }
-        //Closes the BookingsForm and opens the MainForm.
+
+        private void printbookingsbtn_Click(object sender, EventArgs e)
+        {
+            CaptureScreen();
+            printDocument1.Print();
+            printDocument1.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
+        }
+
+        Bitmap memoryImage;
+
+        private void CaptureScreen()
+        {
+            Graphics myGraphics = this.CreateGraphics();
+            Size s = this.Size;
+            memoryImage = new Bitmap(s.Width, s.Height, myGraphics);
+            Graphics memoryGraphics = Graphics.FromImage(memoryImage);
+            memoryGraphics.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, s);
+        }
+
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+
+        }
+
+        private void printDocument1_PrintPage_1(object sender, PrintPageEventArgs e)
+        {
+            e.Graphics.DrawImage(memoryImage, 0, 0);
+        }
     }
 }
