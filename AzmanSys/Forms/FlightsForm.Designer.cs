@@ -249,12 +249,13 @@
             // 
             // Searchflightbtn
             // 
+            this.Searchflightbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.Searchflightbtn.Location = new System.Drawing.Point(306, 175);
             this.Searchflightbtn.Name = "Searchflightbtn";
             this.Searchflightbtn.Size = new System.Drawing.Size(108, 23);
             this.Searchflightbtn.TabIndex = 36;
             this.Searchflightbtn.Text = "Search for Flight";
-            this.Searchflightbtn.UseVisualStyleBackColor = true;
+            this.Searchflightbtn.UseVisualStyleBackColor = false;
             this.Searchflightbtn.Click += new System.EventHandler(this.Searchflightbtn_Click);
             // 
             // flightsearchtxb
@@ -312,12 +313,13 @@
             // 
             // calculatepricesbtn
             // 
+            this.calculatepricesbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.calculatepricesbtn.Location = new System.Drawing.Point(793, 246);
             this.calculatepricesbtn.Name = "calculatepricesbtn";
             this.calculatepricesbtn.Size = new System.Drawing.Size(100, 23);
             this.calculatepricesbtn.TabIndex = 48;
             this.calculatepricesbtn.Text = "Calculate Prices";
-            this.calculatepricesbtn.UseVisualStyleBackColor = true;
+            this.calculatepricesbtn.UseVisualStyleBackColor = false;
             this.calculatepricesbtn.Click += new System.EventHandler(this.calculatepricesbtn_Click);
             // 
             // adultpricelbl
