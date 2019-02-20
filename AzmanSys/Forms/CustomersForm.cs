@@ -26,6 +26,7 @@ namespace AzmanSys
             }
             mysqlConn.connClose();
         }
+        //This is the code conecting the CustomerForm to the tblCustomer SQL Database
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -65,6 +66,7 @@ namespace AzmanSys
             tbTel.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
             }
         }
+        //This converts the value of the selected row in the Customers grid to a string value
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
@@ -92,7 +94,7 @@ namespace AzmanSys
             }
             mysqlConn.connClose();
         }
-        //This is the code for updating the customer details an inserting the details into the tbl Customer table.
+        //This is the code for updating the customer details with form validation and then inserting the new details into the tbl Customer table.
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
@@ -133,7 +135,7 @@ namespace AzmanSys
             printDocument1.Print();
             printDocument1.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
         }
-
+        //This is the code for printing the Customer Form
         Bitmap memoryImage;
 
         private void CaptureScreen()
@@ -144,7 +146,7 @@ namespace AzmanSys
             Graphics memoryGraphics = Graphics.FromImage(memoryImage);
             memoryGraphics.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, s);
         }
-
+        //This is the code for capturing what is on the screen/form for printing
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {

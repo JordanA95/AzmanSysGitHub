@@ -40,14 +40,14 @@ namespace AzmanSys
                 DataTable table = new DataTable();
                 records.Fill(table);
                 t = Convert.ToInt32(table.Rows[0][0].ToString());
-                if(t == 1)
+                if(t == 1) //Is checking the login details are correct.
                 {
-                    MessageBox.Show("Login Successful");
+                    MessageBox.Show("Login Successful"); //Login successful message
                     Close();
                     (new MainForm()).Show();
                 } else
                 {
-                    MessageBox.Show("Incorrect Username or Password");
+                    MessageBox.Show("Incorrect Username or Password"); //Login unsuccessful message
                 }
 
             }

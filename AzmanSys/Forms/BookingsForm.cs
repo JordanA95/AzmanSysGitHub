@@ -50,7 +50,7 @@ namespace AzmanSys
             }
             mysqlConn.connClose();
         }
-        //Adds a booking to the database using the values entrered into the form and sends those details to the MySQL tblBooking database.
+        //Adds a booking to the database using the values entrered into the form with form validation and sends those details to the MySQL tblBooking database.
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
@@ -74,7 +74,7 @@ namespace AzmanSys
             }
             mysqlConn.connClose();
         }
-        //Updates the booking details by using the values entrered into the form and sends those to the MySQL tblBooking database to update it.
+        //Updates the booking details by using the values entrered into the form with form validation and sends those to the MySQL tblBooking database to update it.
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
@@ -88,7 +88,7 @@ namespace AzmanSys
                 mysqlConn.connClose();
             }
         }
-        //Deletes a booking by removing it from the MySQL tblBooking database.
+        //Deletes the selected booking by removing it from the MySQL tblBooking database with confirmation message.
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
@@ -101,6 +101,7 @@ namespace AzmanSys
                 tbBookingTotalCost.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
             }
         }
+        //Converts the value of the selected data to string
 
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -126,7 +127,7 @@ namespace AzmanSys
             printDocument1.Print();
             printDocument1.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
         }
-
+        
         Bitmap memoryImage;
 
         private void CaptureScreen()
@@ -137,7 +138,7 @@ namespace AzmanSys
             Graphics memoryGraphics = Graphics.FromImage(memoryImage);
             memoryGraphics.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, s);
         }
-
+        //Captures the screen to print the form.
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {

@@ -48,7 +48,7 @@ namespace AzmanSys
             }
             mysqlConn.connClose();
         }
-        //Adds a flight to the database using the values entrered into the form and sends those details to the MySQL tblFlight database.
+        //Adds a flight to the database using the values entrered into the form with form validation and sends those details to the MySQL tblFlight database.
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
@@ -72,7 +72,7 @@ namespace AzmanSys
             }
             mysqlConn.connClose();
         }
-        //Updates the flight details by using the values entrered into the form and sends those to the MySQL tblFlight database to update it.
+        //Updates the flight details by using the values entrered into the form with form validation and sends those to the MySQL tblFlight database to update it.
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
@@ -86,7 +86,7 @@ namespace AzmanSys
                 mysqlConn.connClose();
             }
         }
-        //Deletes a flight by removing it from the MySQL tblFlight database.
+        //Deletes the selected flight by removing it from the MySQL tblFlight database with confirmation message.
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
@@ -100,6 +100,7 @@ namespace AzmanSys
                 tbPrice.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
             }
         }
+        //Converts the value of the selected data to string.
 
         private void btnMainMenu_Click(object sender, EventArgs e)
         {
@@ -128,7 +129,7 @@ namespace AzmanSys
             }
             mysqlConn.connClose();
         }
-
+        
         private void flightsearchtxb_TextChanged(object sender, EventArgs e)
         {
             string search = flightsearchtxb.Text;
@@ -140,7 +141,7 @@ namespace AzmanSys
             records.Fill(table);
             dataGridView1.DataSource = table;
         }
-        //Searches the MySQL tblFlight database for flights matching the departure city and arrival city entered.
+        //Searches the MySQL tblFlight database for flights matching the details entered with TextChanged function for flightsearchtxb to update the search when the user types into the textbox.
 
         private void tbPrice_TextChanged(object sender, EventArgs e)
         {
@@ -192,7 +193,7 @@ namespace AzmanSys
             Graphics memoryGraphics = Graphics.FromImage(memoryImage);
             memoryGraphics.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, s);
         }
-
+        //Captures the screen to print the form.
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
