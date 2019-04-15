@@ -232,9 +232,9 @@
             this.Flights_title.ForeColor = System.Drawing.Color.Blue;
             this.Flights_title.Location = new System.Drawing.Point(337, 9);
             this.Flights_title.Name = "Flights_title";
-            this.Flights_title.Size = new System.Drawing.Size(103, 38);
+            this.Flights_title.Size = new System.Drawing.Size(59, 38);
             this.Flights_title.TabIndex = 33;
-            this.Flights_title.Text = "Flights";
+            this.Flights_title.Text = "???";
             // 
             // btnMainMenu
             // 

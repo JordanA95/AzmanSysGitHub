@@ -35,7 +35,7 @@ namespace AzmanSys
             if(Usernametxb.Text != "" & passwordtxb.Text != "") //!= is checking that the textbox is NOT empty
             {
                 int t = 0;
-                string query = "SELECT count(*) FROM `tblUserLogin` WHERE CusUsername ='"+Usernametxb.Text+"' AND CusPassword ='" +passwordtxb.Text+"'";
+                string query = "SELECT count(*) FROM `UserLogin` WHERE Username ='"+Usernametxb.Text+"' AND Password ='" +passwordtxb.Text+"'";
                 MySqlDataAdapter records = new MySqlDataAdapter(query, mysqlConn.conn);
                 DataTable table = new DataTable();
                 records.Fill(table);

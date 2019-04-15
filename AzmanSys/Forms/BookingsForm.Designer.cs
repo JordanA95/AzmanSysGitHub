@@ -210,9 +210,9 @@
             this.Bookings_title.ForeColor = System.Drawing.Color.Blue;
             this.Bookings_title.Location = new System.Drawing.Point(325, 9);
             this.Bookings_title.Name = "Bookings_title";
-            this.Bookings_title.Size = new System.Drawing.Size(125, 38);
+            this.Bookings_title.Size = new System.Drawing.Size(105, 38);
             this.Bookings_title.TabIndex = 37;
-            this.Bookings_title.Text = "Bookings";
+            this.Bookings_title.Text = "Profits";
             // 
             // printbookingsbtn
             // 
