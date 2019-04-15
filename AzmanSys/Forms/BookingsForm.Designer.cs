@@ -194,7 +194,7 @@
             // 
             // btnMainMenu
             // 
-            this.btnMainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnMainMenu.BackColor = System.Drawing.Color.Lime;
             this.btnMainMenu.Location = new System.Drawing.Point(665, 12);
             this.btnMainMenu.Name = "btnMainMenu";
             this.btnMainMenu.Size = new System.Drawing.Size(123, 23);
@@ -206,11 +206,11 @@
             // Bookings_title
             // 
             this.Bookings_title.AutoSize = true;
-            this.Bookings_title.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bookings_title.ForeColor = System.Drawing.Color.Blue;
+            this.Bookings_title.Font = new System.Drawing.Font("Cooper Black", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bookings_title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.Bookings_title.Location = new System.Drawing.Point(325, 9);
             this.Bookings_title.Name = "Bookings_title";
-            this.Bookings_title.Size = new System.Drawing.Size(105, 38);
+            this.Bookings_title.Size = new System.Drawing.Size(109, 31);
             this.Bookings_title.TabIndex = 37;
             this.Bookings_title.Text = "Profits";
             // 
@@ -229,7 +229,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.printbookingsbtn);
             this.Controls.Add(this.Bookings_title);

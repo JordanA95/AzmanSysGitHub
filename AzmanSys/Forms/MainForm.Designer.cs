@@ -71,11 +71,12 @@
             // AzmanSys_title
             // 
             this.AzmanSys_title.AutoSize = true;
-            this.AzmanSys_title.Font = new System.Drawing.Font("Comic Sans MS", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AzmanSys_title.ForeColor = System.Drawing.Color.Blue;
-            this.AzmanSys_title.Location = new System.Drawing.Point(131, 9);
+            this.AzmanSys_title.BackColor = System.Drawing.Color.Transparent;
+            this.AzmanSys_title.Font = new System.Drawing.Font("Lucida Calligraphy", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AzmanSys_title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.AzmanSys_title.Location = new System.Drawing.Point(111, 9);
             this.AzmanSys_title.Name = "AzmanSys_title";
-            this.AzmanSys_title.Size = new System.Drawing.Size(203, 52);
+            this.AzmanSys_title.Size = new System.Drawing.Size(259, 48);
             this.AzmanSys_title.TabIndex = 3;
             this.AzmanSys_title.Text = "DigitalHub";
             // 
@@ -94,7 +95,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(476, 225);
             this.Controls.Add(this.ExitAzmanSys);
             this.Controls.Add(this.AzmanSys_title);

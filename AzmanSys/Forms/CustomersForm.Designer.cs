@@ -165,17 +165,17 @@
             // Customers_title
             // 
             this.Customers_title.AutoSize = true;
-            this.Customers_title.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Customers_title.ForeColor = System.Drawing.Color.Blue;
+            this.Customers_title.Font = new System.Drawing.Font("Cooper Black", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Customers_title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.Customers_title.Location = new System.Drawing.Point(311, 9);
             this.Customers_title.Name = "Customers_title";
-            this.Customers_title.Size = new System.Drawing.Size(149, 38);
+            this.Customers_title.Size = new System.Drawing.Size(160, 31);
             this.Customers_title.TabIndex = 34;
             this.Customers_title.Text = "Customers";
             // 
             // btnMainMenu
             // 
-            this.btnMainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnMainMenu.BackColor = System.Drawing.Color.Lime;
             this.btnMainMenu.Location = new System.Drawing.Point(659, 12);
             this.btnMainMenu.Name = "btnMainMenu";
             this.btnMainMenu.Size = new System.Drawing.Size(129, 23);
@@ -215,7 +215,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.printcustomersbtn);
             this.Controls.Add(this.tbNationality);
