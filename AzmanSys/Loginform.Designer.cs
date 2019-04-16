@@ -71,7 +71,7 @@
             this.logintitle.Name = "logintitle";
             this.logintitle.Size = new System.Drawing.Size(218, 23);
             this.logintitle.TabIndex = 3;
-            this.logintitle.Text = "Please Sign In to Azman Sys";
+            this.logintitle.Text = "Please Sign In to DigitalHub";
             // 
             // Loginform
             // 
