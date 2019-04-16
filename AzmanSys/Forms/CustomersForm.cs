@@ -22,11 +22,11 @@ namespace AzmanSys
             mysqlConn.connect();
             if (mysqlConn.connOpen() == true)
             {
-                dataGridView1.DataSource = mysqlConn.qry("SELECT * FROM `tblCustomer`").Tables[0];
+                dataGridView1.DataSource = mysqlConn.qry("SELECT * FROM `Customer`").Tables[0];
             }
             mysqlConn.connClose();
         }
-        //This is the code conecting the CustomerForm to the tblCustomer SQL Database
+        //This is the code conecting the CustomerForm to the Customer SQL Database
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -36,7 +36,7 @@ namespace AzmanSys
             }
             else if (tbLName.Text == "")
             {
-                MessageBox.Show("Please enter the customer's last name");
+                MessageBox.Show("Please enter the customer's address");
             }
             else if (tbTel.Text == "")
             {
@@ -44,13 +44,13 @@ namespace AzmanSys
             }
             else if (tbNationality.Text == "")
             {
-                MessageBox.Show("Please enter the customer's nationality");
+                MessageBox.Show("Please enter the customer's email");
             }
             if (tbFName.Text != "" & tbLName.Text != "" & tbTel.Text != "" & tbNationality.Text !="") //!= is checking that the textboxes are NOT empty
                 if (mysqlConn.connOpen() == true)
             {
                 mysqlConn.insertCustomer(tbFName.Text, tbLName.Text, tbTel.Text, tbNationality.Text);
-                dataGridView1.DataSource = mysqlConn.qry("SELECT * FROM `tblCustomer`").Tables[0];
+                dataGridView1.DataSource = mysqlConn.qry("SELECT * FROM `Customer`").Tables[0];
             }
             mysqlConn.connClose();
         }
@@ -76,7 +76,7 @@ namespace AzmanSys
             }
             else if (tbLName.Text == "")
             {
-                MessageBox.Show("Please enter the customer's last name");
+                MessageBox.Show("Please enter the customer's address");
             }
             else if (tbTel.Text == "")
             {
@@ -84,13 +84,13 @@ namespace AzmanSys
             }
             else if (tbNationality.Text =="")
             {
-                MessageBox.Show("Please enter the customer's nationality");
+                MessageBox.Show("Please enter the customer's email");
             }
             if (tbFName.Text != "" & tbLName.Text != "" & tbTel.Text != "" & tbNationality.Text != "") //!= is checking that the textboxes are NOT empty
                 if (mysqlConn.connOpen() == true)
             {
                 mysqlConn.updateCustomer(tbCustID.Text, tbFName.Text, tbLName.Text, tbTel.Text, tbNationality.Text);
-                dataGridView1.DataSource = mysqlConn.qry("SELECT * FROM `tblCustomer`").Tables[0];
+                dataGridView1.DataSource = mysqlConn.qry("SELECT * FROM `Customer`").Tables[0];
             }
             mysqlConn.connClose();
         }
@@ -103,7 +103,7 @@ namespace AzmanSys
                 if (mysqlConn.connOpen() == true)
                 {
                     mysqlConn.deleteCustomer(tbCustID.Text);
-                    dataGridView1.DataSource = mysqlConn.qry("SELECT * FROM `tblCustomer`").Tables[0];
+                    dataGridView1.DataSource = mysqlConn.qry("SELECT * FROM `Customer`").Tables[0];
                 }
                 mysqlConn.connClose();
             }

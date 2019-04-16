@@ -66,7 +66,7 @@
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnAdd.Location = new System.Drawing.Point(477, 50);
+            this.btnAdd.Location = new System.Drawing.Point(327, 47);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 1;
@@ -77,7 +77,7 @@
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnUpdate.Location = new System.Drawing.Point(477, 90);
+            this.btnUpdate.Location = new System.Drawing.Point(327, 79);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnUpdate.TabIndex = 2;
@@ -88,7 +88,7 @@
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnDelete.Location = new System.Drawing.Point(477, 134);
+            this.btnDelete.Location = new System.Drawing.Point(327, 114);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 3;
@@ -110,23 +110,23 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(56, 79);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 13);
+            this.label2.Size = new System.Drawing.Size(82, 13);
             this.label2.TabIndex = 5;
-            this.label2.Text = "First Name";
+            this.label2.Text = "Customer Name";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(56, 122);
+            this.label3.Location = new System.Drawing.Point(53, 144);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.Size = new System.Drawing.Size(45, 13);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Last Name";
+            this.label3.Text = "Address";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(56, 159);
+            this.label4.Location = new System.Drawing.Point(53, 114);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(98, 13);
             this.label4.TabIndex = 7;
@@ -150,14 +150,14 @@
             // 
             // tbLName
             // 
-            this.tbLName.Location = new System.Drawing.Point(160, 122);
+            this.tbLName.Location = new System.Drawing.Point(104, 144);
             this.tbLName.Name = "tbLName";
-            this.tbLName.Size = new System.Drawing.Size(100, 20);
+            this.tbLName.Size = new System.Drawing.Size(201, 20);
             this.tbLName.TabIndex = 10;
             // 
             // tbTel
             // 
-            this.tbTel.Location = new System.Drawing.Point(160, 156);
+            this.tbTel.Location = new System.Drawing.Point(160, 111);
             this.tbTel.Name = "tbTel";
             this.tbTel.Size = new System.Drawing.Size(100, 20);
             this.tbTel.TabIndex = 11;
@@ -187,15 +187,15 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(291, 79);
+            this.label5.Location = new System.Drawing.Point(53, 173);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 13);
+            this.label5.Size = new System.Drawing.Size(32, 13);
             this.label5.TabIndex = 36;
-            this.label5.Text = "Nationality";
+            this.label5.Text = "Email";
             // 
             // tbNationality
             // 
-            this.tbNationality.Location = new System.Drawing.Point(360, 76);
+            this.tbNationality.Location = new System.Drawing.Point(122, 170);
             this.tbNationality.Name = "tbNationality";
             this.tbNationality.Size = new System.Drawing.Size(100, 20);
             this.tbNationality.TabIndex = 37;
@@ -203,7 +203,7 @@
             // printcustomersbtn
             // 
             this.printcustomersbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.printcustomersbtn.Location = new System.Drawing.Point(648, 66);
+            this.printcustomersbtn.Location = new System.Drawing.Point(713, 163);
             this.printcustomersbtn.Name = "printcustomersbtn";
             this.printcustomersbtn.Size = new System.Drawing.Size(75, 23);
             this.printcustomersbtn.TabIndex = 38;

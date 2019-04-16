@@ -10,38 +10,38 @@ namespace AzmanSys
 {
     class customerDbConn: dbConn
     {
-        public void insertCustomer(string CusFName, string CusLName, string CusTelNum, string CusNationality)
+        public void insertCustomer(string CustomerName, string CustomerTelNum, string CustomerAddress, string CustomerEmail)
         {
             MySqlCommand comm = conn.CreateCommand();
-            comm.CommandText = "INSERT INTO `tblCustomer` (`CusID`, `CusFName`, `CusLName`, `CusTelNum`, 'CusNationality') VALUES (NULL,@CusFName, @CusLName, @CusTelNum, @CusNationality);";
-            comm.Parameters.AddWithValue("@CusFName", CusFName);
-            comm.Parameters.AddWithValue("@CusLName", CusLName);
-            comm.Parameters.AddWithValue("@CusTelNum", CusTelNum);
-            comm.Parameters.AddWithValue("@CusNationality", CusNationality);
+            comm.CommandText = "INSERT INTO `Customer` (`CustomerID`, `CustomerName`, `CustomerTelNum`, `CustomerAddress`, 'CustomerEmail') VALUES (NULL,@CustomerName, @CustomerTelNum, @CustomerAddress, @CustomerEmail);";
+            comm.Parameters.AddWithValue("@CustomerName", CustomerName);
+            comm.Parameters.AddWithValue("@CustomerTelNum", CustomerTelNum);
+            comm.Parameters.AddWithValue("@CustomerAddress", CustomerAddress);
+            comm.Parameters.AddWithValue("@CustomerEmail", CustomerEmail);
             comm.ExecuteNonQuery();
             connClose();
         }
-        //Inserts the details of a new customer into the SQL Database "tblCustomer" by adding customer details into the table.
+        //Inserts the details of a new customer into the SQL Database "Customer" by adding customer details into the table.
 
-        public void updateCustomer(string CusID, string FName, string LName, string TelNum, string CusNationality)
+        public void updateCustomer(string CustomerID, string CustomerName, string CustomerTelNum, string CustomerAddress, string CustomerEmail)
         {
             MySqlCommand comm = conn.CreateCommand();
-            comm.CommandText = "UPDATE `tblCustomer` SET CusFName=@FName, CusLName=@LName, CusTelNum=@TelNum, CusNationality=@CusNationality WHERE CusID=@CusID;";
-            comm.Parameters.AddWithValue("@CusID", CusID);
-            comm.Parameters.AddWithValue("@FName", FName);
-            comm.Parameters.AddWithValue("@LName", LName);
-            comm.Parameters.AddWithValue("@TelNum", TelNum);
-            comm.Parameters.AddWithValue("@CusNationality", CusNationality);
+            comm.CommandText = "UPDATE `Customer` SET CustomerName=@CustomerName, CustomerTelNum=@CustomerTelNum, CustomerAddress=@CustomerAddress, CustomerEmail=@CustomerEmail WHERE CustomerID=@CustomerID;";
+            comm.Parameters.AddWithValue("@CustomerID", CustomerID);
+            comm.Parameters.AddWithValue("@CustomerName", CustomerName);
+            comm.Parameters.AddWithValue("@CustomerTelNum", CustomerTelNum);
+            comm.Parameters.AddWithValue("@CustomerAddress", CustomerAddress);
+            comm.Parameters.AddWithValue("@CustomerEmail", CustomerEmail);
             comm.ExecuteNonQuery();
             connClose();
         }
         //Updates customer details in the SQL Database by replacing the existing customer details with the new customer details.
 
-        public void deleteCustomer(string CusID)
+        public void deleteCustomer(string CustomerID)
         {
             MySqlCommand comm = conn.CreateCommand();
-            comm.CommandText = "DELETE FROM `tblCustomer` WHERE CusID = @CusID";
-            comm.Parameters.AddWithValue("@CusID", CusID);
+            comm.CommandText = "DELETE FROM `Customer` WHERE CustomerID = @CustomerID";
+            comm.Parameters.AddWithValue("@CustomerID", CustomerID);
             comm.ExecuteNonQuery();
             connClose();
         }
