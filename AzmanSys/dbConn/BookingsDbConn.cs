@@ -21,7 +21,7 @@ namespace AzmanSys
             comm.ExecuteNonQuery();
             connClose();
         }
-        //Inserts the details of a new booking into the SQL Database "tblBooking" by adding booking details into the table.
+        //Inserts the details of a new sale into the SQL Database "Sales" table by adding sale details into the table.
 
         public void updateSale(String CustomerID, string DateOfSale, string Status, string TotalCost, string SalesID)
         {
@@ -35,7 +35,7 @@ namespace AzmanSys
             comm.ExecuteNonQuery();
             connClose();
         }
-        //Updates booking details in the SQL Database by replacing the existing booking details with the new booking details.
+        //Updates sale details in the SQL Database by replacing the existing sales details with the new sales details.
 
         public void deleteSale(string SalesID)
         {
@@ -45,6 +45,15 @@ namespace AzmanSys
             comm.ExecuteNonQuery();
             connClose();
         }
-        //Deletes a booking by removing booking details from the database.
+        //Deletes a sale by removing sales details from the database.
+
+        public void viewtotalnetprofit()
+        {
+            MySqlCommand comm = conn.CreateCommand();
+            comm.CommandText = "SELECT FROM 'Sales' SUM(TotalCost)";
+            comm.ExecuteNonQuery();
+            connClose();
+        }
+        //Gets the total net profit by adding all the values in the 'TotalCost' column of the 'sales' table.
     }
 }

@@ -47,7 +47,7 @@
             this.Bookings_title = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printbookingsbtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.viewnetprofitbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -226,14 +226,15 @@
             this.printbookingsbtn.UseVisualStyleBackColor = false;
             this.printbookingsbtn.Click += new System.EventHandler(this.printbookingsbtn_Click);
             // 
-            // button1
+            // viewnetprofitbtn
             // 
-            this.button1.Location = new System.Drawing.Point(507, 33);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 39;
-            this.button1.Text = "View Profits";
-            this.button1.UseVisualStyleBackColor = true;
+            this.viewnetprofitbtn.Location = new System.Drawing.Point(507, 24);
+            this.viewnetprofitbtn.Name = "viewnetprofitbtn";
+            this.viewnetprofitbtn.Size = new System.Drawing.Size(75, 51);
+            this.viewnetprofitbtn.TabIndex = 39;
+            this.viewnetprofitbtn.Text = "View Total Net Profit";
+            this.viewnetprofitbtn.UseVisualStyleBackColor = true;
+            this.viewnetprofitbtn.Click += new System.EventHandler(this.viewnetprofitbtn_Click);
             // 
             // BookingsForm
             // 
@@ -241,7 +242,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.viewnetprofitbtn);
             this.Controls.Add(this.printbookingsbtn);
             this.Controls.Add(this.Bookings_title);
             this.Controls.Add(this.btnExit);
@@ -289,6 +290,6 @@
         private System.Windows.Forms.Label Bookings_title;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.Button printbookingsbtn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button viewnetprofitbtn;
     }
 }

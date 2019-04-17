@@ -26,7 +26,7 @@ namespace AzmanSys
             }
             mysqlConn.connClose();
         }
-        //Connects to the MySQL Database tblBooking.
+        //Connects to the MySQL Database Sales.
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -50,7 +50,7 @@ namespace AzmanSys
             }
             mysqlConn.connClose();
         }
-        //Adds a booking to the database using the values entrered into the form with form validation and sends those details to the MySQL tblBooking database.
+        //Adds a sale to the database using the values entrered into the form with form validation and sends those details to the MySQL 'Sales' table in the database.
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
@@ -74,7 +74,7 @@ namespace AzmanSys
             }
             mysqlConn.connClose();
         }
-        //Updates the booking details by using the values entrered into the form with form validation and sends those to the MySQL tblBooking database to update it.
+        //Updates the sales details by using the values entrered into the form with form validation and sends those to the MySQL table 'Sales' database to update it.
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
@@ -88,7 +88,7 @@ namespace AzmanSys
                 mysqlConn.connClose();
             }
         }
-        //Deletes the selected booking by removing it from the MySQL tblBooking database with confirmation message.
+        //Deletes the selected sale by removing it from the MySQL 'Sales' table database with confirmation message.
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
@@ -148,6 +148,16 @@ namespace AzmanSys
         private void printDocument1_PrintPage_1(object sender, PrintPageEventArgs e)
         {
             e.Graphics.DrawImage(memoryImage, 0, 0);
+        }
+
+        private void viewnetprofitbtn_Click(object sender, EventArgs e)
+        {
+            if (mysqlConn.connOpen() == true)
+            {
+                mysqlConn.viewtotalnetprofit();
+                dataGridView1.DataSource = mysqlConn.qry("SELECT * FROM `Sales`").Tables[0];
+            }
+            mysqlConn.connClose();
         }
     }
 }
