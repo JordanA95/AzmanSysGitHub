@@ -36,17 +36,17 @@ namespace AzmanSys
             }
             else if (tbFlightID.Text == "")
             {
-                MessageBox.Show("Please enter the Flight ID");
+                MessageBox.Show("Please enter the Sales Status");
             }
             else if (tbBookingTotalCost.Text == "")
             {
-                MessageBox.Show("Please enter the total cost of the booking");
+                MessageBox.Show("Please enter the total cost of the sale");
             }
             if (tbCustomerID.Text != "" & tbFlightID.Text != "" & tbBookingTotalCost.Text != "") //!= is checking that the textboxes are NOT empty
                 if (mysqlConn.connOpen() == true)
             {
-                mysqlConn.addBooking(tbBookingID.Text, tbCustomerID.Text, tbFlightID.Text, dtBookingDateTime.Text, tbBookingTotalCost.Text);
-                dataGridView1.DataSource = mysqlConn.qry("SELECT * FROM `tblBooking`").Tables[0];
+                mysqlConn.addSale(tbBookingID.Text, tbCustomerID.Text, tbFlightID.Text, dtBookingDateTime.Text, tbBookingTotalCost.Text);
+                dataGridView1.DataSource = mysqlConn.qry("SELECT * FROM `Sales`").Tables[0];
             }
             mysqlConn.connClose();
         }
@@ -69,8 +69,8 @@ namespace AzmanSys
             if (tbCustomerID.Text != "" & tbFlightID.Text != "" & tbBookingTotalCost.Text != "") //!= is checking that the textboxes are NOT empty
                 if (mysqlConn.connOpen() == true)
             {
-                mysqlConn.updateBooking(tbBookingID.Text, tbCustomerID.Text, tbFlightID.Text, dtBookingDateTime.Text, tbBookingTotalCost.Text);
-                dataGridView1.DataSource = mysqlConn.qry("SELECT * FROM `tblBooking`").Tables[0];
+                mysqlConn.updateSale(tbBookingID.Text, tbCustomerID.Text, tbFlightID.Text, dtBookingDateTime.Text, tbBookingTotalCost.Text);
+                dataGridView1.DataSource = mysqlConn.qry("SELECT * FROM `Sales`").Tables[0];
             }
             mysqlConn.connClose();
         }
@@ -82,8 +82,8 @@ namespace AzmanSys
             {
                 if (mysqlConn.connOpen() == true)
                 {
-                    mysqlConn.deleteBooking(tbBookingID.Text);
-                    dataGridView1.DataSource = mysqlConn.qry("SELECT * FROM `tblBooking`").Tables[0];
+                    mysqlConn.deleteSale(tbBookingID.Text);
+                    dataGridView1.DataSource = mysqlConn.qry("SELECT * FROM `Sales`").Tables[0];
                 }
                 mysqlConn.connClose();
             }

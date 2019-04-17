@@ -9,39 +9,39 @@ namespace AzmanSys
 {
     class BookingsDbConn : dbConn
     {
-        public void addBooking(String BookinID, string CusID, string FlightID, string Booking_DateTime, string Total_BookingCost)
+        public void addSale(String CustomerID, string DateOfSale, string Status, string TotalCost, string SalesID)
         {
             MySqlCommand comm = conn.CreateCommand();
-            comm.CommandText = "UPDATE `tblBooking` SET `CusID`=@CusID,`FlightID`=@FlightID,`Booking_DateTime`=@Booking_DateTime,`Total_BookingCost`=@Total_BookingCost WHERE BookinID=@BookinID";
-            comm.Parameters.AddWithValue("@CusID", CusID);
-            comm.Parameters.AddWithValue("@FlightID", FlightID);
-            comm.Parameters.AddWithValue("@Booking_DateTime", Booking_DateTime);
-            comm.Parameters.AddWithValue("@Total_BookingCost", Total_BookingCost);
-            comm.Parameters.AddWithValue("@BookinID", BookinID);
+            comm.CommandText = "UPDATE `Sales` SET `CustomerID`=@CustomerID,`DateOfSale`=@DateOfSale,`Status`=@Status, 'TotalCost'=@TotalCost WHERE SalesID=@SalesID";
+            comm.Parameters.AddWithValue("@CustomerID", CustomerID);
+            comm.Parameters.AddWithValue("@DateOfSale", DateOfSale);
+            comm.Parameters.AddWithValue("@Status", Status);
+            comm.Parameters.AddWithValue("@TotalCost", TotalCost);
+            comm.Parameters.AddWithValue("@SalesID", SalesID);
             comm.ExecuteNonQuery();
             connClose();
         }
         //Inserts the details of a new booking into the SQL Database "tblBooking" by adding booking details into the table.
 
-        public void updateBooking(String BookinID, string CusID, string FlightID, string Booking_DateTime, string Total_BookingCost)
+        public void updateSale(String CustomerID, string DateOfSale, string Status, string TotalCost, string SalesID)
         {
             MySqlCommand comm = conn.CreateCommand();
-            comm.CommandText = "UPDATE `tblBooking` SET `CusID`=@CusID,`FlightID`=@FlightID,`Booking_DateTime`=@Booking_DateTime,`Total_BookingCost`=@Total_BookingCost WHERE BookinID=@BookinID";
-            comm.Parameters.AddWithValue("@CusID", CusID );
-            comm.Parameters.AddWithValue("@FlightID", FlightID);
-            comm.Parameters.AddWithValue("@Booking_DateTime", Booking_DateTime);
-            comm.Parameters.AddWithValue("@Total_BookingCost", Total_BookingCost);
-            comm.Parameters.AddWithValue("@BookinID", BookinID);
+            comm.CommandText = "UPDATE `Sales` SET `CustomerID`=@CustomerID,`DateOfSale`=@DateofSale,`Status`=@Status,`TotalCost`=@TotalCost WHERE SalesID=@SalesID";
+            comm.Parameters.AddWithValue("@CustomerID", CustomerID );
+            comm.Parameters.AddWithValue("@DateOfSale", DateOfSale);
+            comm.Parameters.AddWithValue("@Status", Status);
+            comm.Parameters.AddWithValue("@TotalCost", TotalCost);
+            comm.Parameters.AddWithValue("@SalesID", SalesID);
             comm.ExecuteNonQuery();
             connClose();
         }
         //Updates booking details in the SQL Database by replacing the existing booking details with the new booking details.
 
-        public void deleteBooking(string BookinID)
+        public void deleteSale(string SalesID)
         {
             MySqlCommand comm = conn.CreateCommand();
-            comm.CommandText = "DELETE FROM `tblBooking` WHERE `BookinID` = @BookinID";
-            comm.Parameters.AddWithValue("@BookinID", BookinID);
+            comm.CommandText = "DELETE FROM `Sales` WHERE `SalesID` = @SalesID";
+            comm.Parameters.AddWithValue("@SalesID", SalesID);
             comm.ExecuteNonQuery();
             connClose();
         }
